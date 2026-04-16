@@ -1,143 +1,190 @@
 ---
 layout: single
-title: About
+title: "About — Lovy Jain"
 permalink: /about/
+author_profile: true
+toc: true
+toc_label: "On This Page"
+toc_icon: "user"
 ---
 
-## Lovy Jain
+## Enterprise Technical Sales Specialist · AI Solutions Architect · Business Messaging & CRM Expert
 
-**Technical Architect & AI Solutions Consultant** with 13+ years of experience designing and delivering enterprise-grade solutions across Azure, Microsoft 365, Dynamics 365, Power Platform, and modern AI technologies.
+**13+ Years of Enterprise Sales & Solutions Experience**
 
-Currently at **Nagarro** as a Technical Architect / Tech Lead, I lead architecture decisions and engineering teams for global enterprise clients. I bridge deep technical expertise with business strategy — from RFP and high-level design through to go-live and continuous improvement.
+Results-driven Technical Architect and Enterprise Solutions Specialist with 13+ years of experience designing and delivering large-scale AI-integrated, cloud-native, and CRM-led solutions for Fortune 500 clients across APAC and global markets.
 
-Outside of client work, I am independently building [JainKwiz](https://jainkwiz.com) — a gamified Jain philosophy learning platform — and completing an MBA dissertation on AI in customer service.
+Proven track record in end-to-end consultative sales cycles, executive stakeholder engagement, and solutioning across Business Messaging, Dynamics 365, and Azure AI. Adept at bridging business and technical conversations to unlock stakeholder budgets, architect agentic AI workflows, and drive measurable revenue outcomes.
 
----
-
-## What I Do
-
-### Enterprise Architecture
-I design scalable, resilient cloud-native solutions using Azure-native services:
-- **Azure Functions** for event-driven serverless compute
-- **Azure Service Bus** for reliable async messaging between distributed systems
-- **Azure API Management (APIM)** for secure, observable API gateways
-- **Cosmos DB** for globally distributed NoSQL data at scale
-- **Azure Key Vault & Managed Identity** for zero-trust security posture
-- **Azure SignalR** for real-time communication in event-driven apps
-
-### AI & Copilot Solutions
-I build intelligent enterprise applications that go beyond chatbot demos:
-- **RAG pipelines** grounded on SharePoint and enterprise knowledge bases
-- **Copilot Studio** agents with Dataverse, Teams, and Graph API integration
-- **Azure OpenAI (GPT-4o)** for natural language interfaces and document intelligence
-- **Semantic Kernel** for orchestrating multi-step AI workflows
-- **LangChain** for Python-based AI pipeline development
-
-### Microsoft 365 & SharePoint
-SharePoint is the connective tissue of most enterprise intranets — and a lot can go wrong:
-- **SPFx** web part and extension development (React, TypeScript, Fluent UI)
-- **SharePoint governance** frameworks for enterprise tenants with thousands of users
-- **Microsoft Graph API** integration for M365 data surfaced in custom apps
-- **Microsoft Purview** for data compliance, sensitivity labels, and information governance
-- **Teams app development** — tabs, bots, message extensions, meeting apps
-
-### Power Platform & D365
-- **Power Apps** for model-driven and canvas business applications
-- **Power Automate** for intelligent workflow automation
-- **Copilot Studio** conversational AI with enterprise data connections
-- **Dataverse** schema design and data modelling at scale
-- **D365 CRM** — customisation, plugins, FetchXML, integration patterns
-- **D365 Finance & Operations** and legacy AX 2012 modernisation
+Experienced in leading cross-functional teams of 10+, building global playbooks, establishing Centres of Excellence, and managing RFP responses and pre-sales engagements for enterprise clients.
 
 ---
 
-## Experience Highlights
+## Core Competencies
 
-**Nagarro (2019 — Present)** — Technical Architect / Tech Lead
-
-Led architecture and delivery for a portfolio of global enterprise clients:
-
-- **Sodexo** — Designed a modular "Lego" architecture integrating D365, Azure Service Bus, Azure Functions, Cosmos DB, and Blob Storage. Built the QR Digital Concierge mobile app (React + Ionic) with CIAM integration and iOS/Android builds. Led a team of 10 engineers across UK and India.
-
-- **DHL** — SharePoint Online intranet platform architecture and delivery. Custom SPFx web parts, MS Graph integration, Power Automate workflows, and enterprise search configuration.
-
-- **KPMG UK** — Copilot Studio enterprise bot with Microsoft Purview security, sensitivity labels, and M365 governance integration. Connected to SharePoint, Teams, and D365 as an AI-first knowledge assistant.
-
-- **Eli Lilly** — End-to-end data pipeline from D365 Dataverse to Azure Synapse and Databricks. Enabled AI/ML workloads on CRM data with Power BI reporting and ADF orchestration.
-
-- **Fresenius Kabi** — HLD for ECM platform RFP. Records management, SharePoint Online governance, custom SPFx web parts, and document lifecycle management.
-
-- **Chevron** — SharePoint-based carbon emissions tracking with Qualtrics API integration. Custom SPFx components and Power Automate workflows for sustainability reporting.
-
-- **Fiji Airways** — SharePoint intranet modernisation with CSP hardening and external API integrations.
-
-**Previous Roles (2012 — 2019)** — Various Microsoft Partners
-
-Senior Software Engineer and Software Engineer roles across Infosys, TCS, KPMG, Coforge, and HCL. Built SharePoint Online platforms, .NET APIs, Power Apps, and introduced CI/CD practices to development teams.
+| Area | Competency |
+|------|-----------|
+| Sales & Solutioning | Enterprise Technical Sales · Consultative Solutions Architecture · Pipeline Development & Pre-Sales |
+| AI & Automation | AI/Agentic Workflow Design · Azure AI & Copilot Studio · Responsible AI Practices |
+| CRM & Messaging | CRM/ERP Integration (D365, API) · Business Messaging & Omnichannel |
+| Leadership | Executive Stakeholder Engagement · Cross-Functional Team Leadership · RFP / Business Case Development |
+| Outcomes | Revenue-Oriented Solutioning |
 
 ---
 
-## What Makes Me Different
+## Technical Skills
 
-**Full-lifecycle ownership** — I do not just design architecture. I code, review, deploy, and monitor. I understand what makes a good design because I have written the code that implements it.
+### AI & Messaging
+Azure OpenAI · Copilot Studio · Azure AI Foundry · GitHub Copilot · Azure ML · Agentic AI · Prompt Engineering · RAG · SignalR
 
-**Enterprise + startup mindset** — Building JainKwiz from zero to production as a solo founder has given me product sensibility that pure enterprise work rarely develops. I care about user experience, cost efficiency, and shipping working software — not just technical correctness.
+### CRM / ERP
+Microsoft Dynamics 365 · Dataverse · FetchXML · Power Platform · Custom Connectors · D365 Customer Service
 
-**Microsoft ecosystem depth** — I hold Azure, M365, Power Platform, D365, and AI Fundamentals certifications and have hands-on depth across the entire stack. I know where the seams are between the products and how to bridge them effectively.
+### API & Integration
+.NET Core API · REST API · MS Graph API · Azure APIM · Service Bus · Azure Functions · Cosmos DB
 
-**Communication as a core skill** — I write architecture decision records, produce HLD documentation, and present technical concepts to non-technical stakeholders. Good architecture that cannot be explained is not good architecture.
+### Cloud & DevOps
+Azure (Functions, App Service, Static Web Apps, Key Vault, Redis, Databricks) · Azure DevOps · GitHub CI/CD
+
+### Business Messaging
+WhatsApp Business API · Omnichannel Engagement · Chatbot Orchestration · Webhook Integrations
+
+### Frontend
+React JS · Ionic React · TypeScript · HTML5 · CSS3
+
+### Certifications
+MS-600 · AZ-303 · AZ-304 · PL-400 · PL-600 · Microsoft Certified Trainer (MCT)
 
 ---
 
-## Current Focus
+## Key Achievements
 
-- **AI Agents & Copilot Studio** — multi-step agentic workflows for enterprise automation
-- **RAG architecture patterns** — grounding LLMs in enterprise knowledge bases securely
-- **JainKwiz** — live tournament engine, Hindi localisation, Pathshala classroom mode
-- **MBA dissertation** — AI in customer service: a case study of Verizon (completing 2025)
+- **Drove end-to-end pre-sales cycle** for a Facility Management digital transformation at Sodexo — designed solution architecture, responded to RFPs, and led technical presentations that secured the engagement.
+
+- **Architected an AI-powered agentic customer engagement platform** integrating Dynamics 365 CRM, Azure Service Bus, and Azure OpenAI — enabling automated service request orchestration across **10,000+ facilities globally**.
+
+- **Built and presented executive-level technical workshops** (joint architecture sessions) for enterprise clients at Chevron, KPMG UK, and BHF — aligning stakeholders across business and technology.
+
+- **Established Power Platform Centre of Excellence (COE) from scratch** — creating governance frameworks, reusable accelerators, and training playbooks adopted organisation-wide.
+
+- **Led a team of 10 engineers** across multiple delivery tracks, managing sprint planning, resource allocation, and cross-functional coordination with offshore and onshore stakeholders.
 
 ---
 
-## Certifications
+## Professional Experience
 
-| Certification | Issuer | Status |
-|--------------|--------|--------|
-| Azure Fundamentals (AZ-900) | Microsoft | Certified |
-| M365 Fundamentals (MS-900) | Microsoft | Certified |
-| Power Platform Fundamentals (PL-900) | Microsoft | Certified |
-| D365 Fundamentals CRM (MB-910) | Microsoft | Certified |
-| Azure AI Fundamentals (AI-900) | Microsoft | Certified |
-| GitHub Copilot | GitHub / Microsoft | Certified |
-| Microsoft Certified Trainer (MCT) | Microsoft | Pursuing |
-| Power Platform Developer Associate (PL-400) | Microsoft | Target 2025 |
+### Technical Architect — AI & Enterprise Solutions
+**Nagarro** · Oct 2022 – Present  
+*Clients: Sodexo, BHF*
+
+Led technical architecture and pre-sales for AI-integrated, mobile-first enterprise applications; drove solutions spanning Dynamics 365 CRM, Azure AI, and Power Platform.
+
+- Designed and delivered **agentic AI solutions** using Azure OpenAI and Copilot Studio to automate multi-step customer workflows across service, maintenance, and helpdesk domains.
+- Architected end-to-end **CRM-led customer engagement platform** integrating Dynamics 365, Azure Functions, and Service Bus — enabling real-time service orchestration for 10,000+ global facilities.
+- Served as trusted **technical advisor to executive stakeholders** — led whiteboard architecture workshops, joint solution design sessions, and business case presentations to unlock C-level budgets.
+- Managed **RFP responses and pre-sales technical presentations** — shaped winning proposals for new business opportunities, including solution design and commercial structure.
+- Built a **Dataverse to Databricks analytics pipeline** enabling business intelligence reporting for CX, operations, and executive leadership teams.
+- Led a **cross-functional team of 10+ professionals**, coordinating delivery across frontend (React/Ionic), backend (.NET Core), and Azure infrastructure tracks.
+- Established **Power Platform COE and reusable delivery accelerators** — reduced solution build time by 30% and enabled scalable rollout across client organisations.
+- Developed **global best-practice playbooks** for platform implementation and client success, adopted by internal teams across geographies.
+
+---
+
+### Associate Technical Architect
+**HCL Technologies** · Sept 2020 – Oct 2022  
+*Client: Chevron (Oil & Gas)*
+
+Led enterprise intranet portal architecture and delivery for a global energy client, with Azure AD-secured multi-app platform and Microsoft Viva adoption.
+
+- Led **joint architecture workshops** and requirement-gathering sessions with Chevron stakeholders — aligned technical solutions to business goals across multiple departments.
+- Architected **tenant-level provisioning solutions** using Azure Functions and Site Scripts enabling scalable, governed SharePoint deployments across business units.
+- Implemented **enterprise information governance** with Sensitivity Labels, Retention Labels, and multi-stage disposition workflows.
+- Built **React-based SPFx applications** secured via MSAL and Azure AD — delivering a unified digital workplace experience for thousands of employees.
+
+---
+
+### Technical Analyst
+**NIIT Technologies (Coforge)** · July 2019 – Sept 2020  
+*Client: ExpressJet Airways (US)*
+
+- Designed and delivered **M365-integrated intranet portal** with React/SPFx, OAuth-secured APIs, and complex data visualisation widgets for airline operational teams.
+- Led client requirement gathering and authored detailed **technical design documents**, serving as the bridge between business stakeholders and the engineering team.
+- Implemented **Azure Managed Identity and App Registration** for secure, token-based API authentication across enterprise systems.
+
+---
+
+### Developer & Offshore Coordinator
+**KPMG** · Apr 2017 – July 2019  
+*Client: KPMG UK*
+
+- Coordinated between onshore UK stakeholders and offshore development teams — managed expectations, communicated product feedback, and translated business needs into technical solutions.
+- Led module development, governance framework creation, and launch planning for a **mobile-enabled intranet portal** serving KPMG UK's global workforce.
+- Identified feature gaps from client usage patterns and drove internal product improvements directly influencing the platform roadmap.
+
+---
+
+### Developer
+**TCS** · Feb 2016 – Mar 2017  
+*Client: Eli Lilly (Pharma)*
+
+- Built and maintained enterprise SharePoint applications for a global pharmaceutical company — developed InfoPath forms, automated workflows, and supported live production systems within SLA.
+
+---
+
+### Developer
+**Infosys** · Sept 2013 – Feb 2016  
+*Client: Fresenius Kabi (Healthcare, Germany)*
+
+- Developed globally localised, cross-device responsive **SharePoint 2013 portal** for a European healthcare company — supporting 40+ country deployments with full cross-browser compatibility.
+
+---
+
+## AI Adoption & Innovation
+
+- Actively redesigned personal and team workflows using **GitHub Copilot, Azure OpenAI, and Copilot Studio** — measurably reducing code review cycles and accelerating solution prototyping.
+- Pursuing ongoing **AI skill development**: completed modules on responsible AI practices, bias mitigation, and ethical AI deployment aligned with Microsoft AI standards.
+- Explored and implemented **AI-assisted pre-sales automation** using LLMs to accelerate RFP responses, architecture diagrams, and technical proposal generation.
 
 ---
 
 ## Education
 
-**MBA — Information Technology** (2023–2025, In Progress)  
-Mewar University  
-Dissertation: *"AI in Customer Service — A Case Study of Verizon"*  
-Research covers enterprise AI adoption, conversational AI platforms, and customer experience transformation through intelligent automation.
+**Master of Business Administration (IT)**  
+Mewar University, Chittorgarh · 2023 – 2025  
+CGPA: 7.28  
+*Dissertation: "AI in Customer Service — A Case Study of Verizon"*
 
-**B.Tech — Computer Science & Engineering** (2008–2012)  
-GBTU (Now AKTU), Lucknow  
-Foundation in algorithms, data structures, software engineering, and systems design.
+**Bachelor of Technology (B.Tech) — Computer Science & Engineering**  
+Krishna Engineering College, AKTU · 2008 – 2012  
+Aggregate: 75%
 
 ---
 
-## Personal
+## Certifications
 
-I am deeply involved in the Jain community — as an organiser of large-scale events (including Panch Kalyanak at Shivaji Park, Mumbai), and as the builder of JainKwiz, a technology platform aimed at making Jain education engaging and accessible to younger generations globally.
-
-I write about enterprise architecture, AI adoption patterns, Microsoft technologies, and occasionally about the intersection of technology and community impact. Subscribe to the blog or connect on LinkedIn to follow along.
+| Certification | Code | Status |
+|--------------|------|--------|
+| Developing Solutions for Microsoft 365 | MS-600 | Certified |
+| Microsoft Azure Architect Technologies | AZ-303 | Certified |
+| Microsoft Azure Architect Design | AZ-304 | Certified |
+| Power Platform Developer Associate | PL-400 | Certified |
+| Power Platform Solution Architect | PL-600 | Certified |
+| Microsoft Certified Trainer | MCT | Certified |
+| Azure Fundamentals | AZ-900 | Certified |
+| M365 Fundamentals | MS-900 | Certified |
+| Power Platform Fundamentals | PL-900 | Certified |
+| D365 Fundamentals CRM | MB-910 | Certified |
+| Azure AI Fundamentals | AI-900 | Certified |
+| GitHub Copilot | — | Certified |
 
 ---
 
 ## Connect
 
-- **Email**: lovyjain18@gmail.com
+Open to conversations about enterprise AI, Microsoft solutions, architecture consulting, pre-sales engagements, or meaningful collaborations.
+
+- **Email**: [lovyjain18@gmail.com](mailto:lovyjain18@gmail.com)
+- **Phone**: [+91-9711245951](tel:+919711245951)
 - **LinkedIn**: [linkedin.com/in/jainlovy](https://linkedin.com/in/jainlovy)
 - **JainKwiz**: [jainkwiz.com](https://jainkwiz.com)
-
-Open to conversations about enterprise AI architecture, Microsoft consulting, speaking opportunities, or meaningful collaborations.
+- **Location**: Delhi-NCR, India

@@ -1,9 +1,26 @@
 ---
 title: "Building RAG Pipelines with Azure OpenAI and SharePoint"
 date: 2026-04-10
+last_modified_at: 2026-04-10
 layout: single
-categories: [azure, ai, sharepoint]
-tags: [Azure OpenAI, RAG, SharePoint, Semantic Kernel, Enterprise AI]
+author_profile: true
+read_time: true
+show_date: true
+toc: true
+toc_label: "Contents"
+toc_sticky: true
+categories:
+  - azure
+  - ai
+  - sharepoint
+tags:
+  - Azure OpenAI
+  - RAG
+  - SharePoint
+  - Semantic Kernel
+  - Enterprise AI
+  - Azure AI Search
+excerpt: "Production-tested architecture for grounding LLMs in enterprise SharePoint knowledge — permission-aware retrieval, hybrid search, and citation-first prompt design."
 ---
 
 ## Introduction

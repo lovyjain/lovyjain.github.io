@@ -1,3 +1,249 @@
+# =============================================================================
+# Theme — using local gemspec (minimal-mistakes-jekyll.gemspec)
+# =============================================================================
+# theme: minimal-mistakes-jekyll      # for local / gem-based build
+# remote_theme: mmistakes/minimal-mistakes   # uncomment for classic GitHub Pages
+
+minimal_mistakes_skin    : "dark"  # "air" | "aqua" | "contrast" | "dark" | "dirt" | "neon" | "mint" | "plum" | "sunrise"
+
+# =============================================================================
+# Site Settings
+# =============================================================================
+locale                   : "en-US"
+title                    : "Lovy Jain"
+title_separator          : "-"
+subtitle                 : "Technical Architect & AI Solutions Specialist"
+name                     : "Lovy Jain"
+description              : "Enterprise Technical Architect with 13+ years building AI-integrated, cloud-native, and CRM-led solutions for Fortune 500 clients. Specialising in Azure AI, Dynamics 365, Power Platform, and Business Messaging."
+url                      : "https://lovyjain.github.io"
+baseurl                  : ""
+repository               : "lovyjain/lovyjain.github.io"
+teaser                   : "/assets/images/teaser.jpg"
+logo                     :
+masthead_title           : "Lovy Jain"
+breadcrumbs              : true
+words_per_minute         : 200
+enable_copy_code_button  : true
+
+# =============================================================================
+# Comments
+# =============================================================================
+comments:
+  provider               : false  # "disqus" | "discourse" | "facebook" | "utterances" | false
+
+# =============================================================================
+# Search
+# =============================================================================
+search                   : true
+search_full_content      : true
+search_provider          : lunr
+
+# =============================================================================
+# SEO / Social
+# =============================================================================
+google_site_verification :
+bing_site_verification   :
+og_image                 : "/assets/images/og-image.jpg"
+
+twitter:
+  username               : ""
+
+social:
+  type                   : "Person"
+  name                   : "Lovy Jain"
+  links:
+    - "https://linkedin.com/in/jainlovy"
+    - "https://jainkwiz.com"
+
+# =============================================================================
+# Analytics
+# =============================================================================
+analytics:
+  provider               : false  # "google-gtag" | false
+  google:
+    tracking_id          :
+    anonymize_ip         : false
+
+# =============================================================================
+# Author
+# =============================================================================
+author:
+  name     : "Lovy Jain"
+  avatar   : "/assets/images/profile.jpg"
+  bio      : >
+    Enterprise Technical Architect & AI Solutions Specialist.
+    13+ years delivering AI, CRM, and cloud-native solutions for Fortune 500 clients.
+    Building **[JainKwiz](https://jainkwiz.com)** on the side.
+  location : "📍 Delhi-NCR, India"
+  email    : "lovyjain18@gmail.com"
+  links:
+    - label : "LinkedIn"
+      icon  : "fab fa-fw fa-linkedin"
+      url   : "https://www.linkedin.com/in/jainlovy/"
+    - label : "Email"
+      icon  : "fas fa-fw fa-envelope"
+      url   : "mailto:lovyjain18@gmail.com"
+    - label : "Phone"
+      icon  : "fas fa-fw fa-phone"
+      url   : "tel:+919711245951"
+    - label : "JainKwiz"
+      icon  : "fas fa-fw fa-globe"
+      url   : "https://jainkwiz.com"
+    - label : "GitHub"
+      icon  : "fab fa-fw fa-github"
+      url   : "https://github.com/lovyjain"
+    - label : "Certifications"
+      icon  : "fas fa-certificate fa-spin"
+      url   : "https://learn.microsoft.com/en-us/users/lovyjain/"
+
+# =============================================================================
+# Footer
+# =============================================================================
+footer:
+  links:
+    - label : "LinkedIn"
+      icon  : "fab fa-fw fa-linkedin"
+      url   : "https://www.linkedin.com/in/jainlovy/"
+    - label : "GitHub"
+      icon  : "fab fa-fw fa-github"
+      url   : "https://github.com/lovyjain"
+    - label : "JainKwiz"
+      icon  : "fas fa-fw fa-globe"
+      url   : "https://jainkwiz.com"
+
+# =============================================================================
+# Reading Files
+# =============================================================================
 include:
+  - .htaccess
   - _pages
-permalink: /:categories/:title/
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+keep_files:
+  - .git
+encoding                 : "utf-8"
+markdown_ext             : "markdown,mkdown,mkdn,mkd,md"
+
+# =============================================================================
+# Conversion
+# =============================================================================
+markdown                 : kramdown
+highlighter              : rouge
+lsi                      : false
+excerpt_separator        : "\n\n"
+incremental              : false
+
+# =============================================================================
+# Markdown Processing
+# =============================================================================
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+
+# =============================================================================
+# Sass/SCSS
+# =============================================================================
+sass:
+  sass_dir : _sass
+  style    : compressed
+
+# =============================================================================
+# Outputting
+# =============================================================================
+permalink    : /:categories/:title/
+paginate     : 6
+paginate_path: /page:num/
+timezone     : "Asia/Kolkata"
+
+# =============================================================================
+# Plugins
+# =============================================================================
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-seo-tag
+
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-remote-theme
+
+# =============================================================================
+# Archives — Liquid-based (GitHub Pages compatible)
+# =============================================================================
+category_archive:
+  type : liquid
+  path : /categories/
+tag_archive:
+  type : liquid
+  path : /tags/
+
+# =============================================================================
+# HTML Compression
+# =============================================================================
+compress_html:
+  clippings : all
+  ignore:
+    envs: development
+
+# =============================================================================
+# Front Matter Defaults
+# =============================================================================
+defaults:
+  # Posts
+  - scope:
+      path : ""
+      type : posts
+    values:
+      layout         : single
+      author_profile : true
+      read_time      : true
+      show_date      : true
+      comments       : false
+      share          : true
+      related        : true
+
+  # Pages
+  - scope:
+      path : "_pages"
+      type : pages
+    values:
+      layout         : single
+      author_profile : true

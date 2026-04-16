@@ -1,7 +1,24 @@
 ---
 title: "13 Lessons from 13 Years as a Microsoft Technology Architect"
 date: 2026-04-18
+last_modified_at: 2026-04-18
 layout: single
+author_profile: true
+read_time: true
+show_date: true
+toc: true
+toc_label: "Lessons"
+toc_sticky: true
+categories:
+  - career
+  - architecture
+tags:
+  - Career
+  - Architecture
+  - Microsoft
+  - Enterprise
+  - Lessons Learned
+excerpt: "Distilled wisdom from 13 years building enterprise systems — on simplicity, trade-offs, communication, continuous learning, and building your own products."
 ---
 
 ## Introduction

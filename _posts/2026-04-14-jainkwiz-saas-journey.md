@@ -1,9 +1,27 @@
 ---
 title: "JainKwiz: What Building a SaaS Product Taught Me That Enterprise Work Never Did"
 date: 2026-04-14
+last_modified_at: 2026-04-14
 layout: single
-categories: [product, saas, azure]
-tags: [JainKwiz, SaaS, Azure, Product Development, Entrepreneurship, Real-time, SignalR, Cosmos DB]
+author_profile: true
+read_time: true
+show_date: true
+toc: true
+toc_label: "Contents"
+toc_sticky: true
+categories:
+  - product
+  - saas
+  - azure
+tags:
+  - JainKwiz
+  - SaaS
+  - Azure
+  - Product Development
+  - Entrepreneurship
+  - SignalR
+  - Cosmos DB
+excerpt: "The architecture, product decisions, and hard lessons from building a gamified Jain learning platform from zero to production as a solo founder."
 ---
 
 ## Introduction

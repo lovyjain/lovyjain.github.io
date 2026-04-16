@@ -1,9 +1,27 @@
 ---
 title: "SPFx Development Best Practices: Hard-Won Lessons from Production SharePoint Projects"
 date: 2026-04-15
+last_modified_at: 2026-04-15
 layout: single
-categories: [sharepoint, spfx, microsoft365]
-tags: [SPFx, SharePoint Online, React, TypeScript, M365, Microsoft Graph, Performance]
+author_profile: true
+read_time: true
+show_date: true
+toc: true
+toc_label: "Contents"
+toc_sticky: true
+categories:
+  - sharepoint
+  - spfx
+  - microsoft365
+tags:
+  - SPFx
+  - SharePoint Online
+  - React
+  - TypeScript
+  - M365
+  - Microsoft Graph
+  - Performance
+excerpt: "Project structure, TypeScript discipline, performance patterns, CSP handling, and deployment practices for enterprise-grade SharePoint Framework solutions."
 ---
 
 ## Introduction
