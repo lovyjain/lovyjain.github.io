@@ -1,0 +1,25 @@
+<section id="blog" class="section">
+  <div class="container reveal">
+    <div class="section-heading">
+      <h2>Blog</h2>
+      <a class="text-link" href="{{ '/blog/' | relative_url }}">View all posts</a>
+    </div>
+    <div class="blog-grid">
+      {% for post in site.posts limit: 3 %}
+      <article class="card blog-card">
+        <img src="{{ '/assets/images/blog-placeholder.svg' | relative_url }}" alt="Featured image placeholder">
+        <div>
+          <p class="meta">{{ post.date | date: '%b %d, %Y' }}</p>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt | strip_html | truncate: 130 }}</p>
+          <div class="tag-row">
+            {% for tag in post.tags limit: 3 %}
+              <span>{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

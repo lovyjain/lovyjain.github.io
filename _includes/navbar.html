@@ -1,0 +1,15 @@
+<header class="site-header" id="top">
+  <nav class="container nav" aria-label="Primary">
+    <a class="brand" href="#home" aria-label="Lovy Jain home">
+      <img src="{{ '/assets/images/profile-placeholder.svg' | relative_url }}" alt="Lovy Jain avatar" class="brand-avatar">
+      <span>Lovy Jain</span>
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+    <ul id="menu" class="menu">
+      {% assign sections = 'Home,About,Skills,Projects,Experience,Blog,Contact' | split: ',' %}
+      {% for item in sections %}
+        <li><a href="#{{ item | downcase }}">{{ item }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
