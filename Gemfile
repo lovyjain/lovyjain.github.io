@@ -1,12 +1,8 @@
 source "https://rubygems.org"
+gemspec
 
-gem "jekyll", "~> 4.3"
-gem "minimal-mistakes-jekyll"
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
-group :jekyll_plugins do
-  gem "jekyll-feed"
-  gem "jekyll-sitemap"
-  gem "jekyll-seo-tag"
-  gem "jekyll-include-cache"
-  gem "jekyll-paginate"
-end
+# bundle install
+# bundle exec jekyll serve
+# bundle exec jekyll serve --livereload
