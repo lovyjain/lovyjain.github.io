@@ -12,15 +12,15 @@ minimal_mistakes_skin    : "dark"  # "air" | "aqua" | "contrast" | "dark" | "dir
 locale                   : "en-US"
 title                    : "Lovy Jain"
 title_separator          : "-"
-subtitle                 : "Technical Architect & AI Solutions Specialist"
+subtitle                 : "LovyVerse — AI Architect Notes"
 name                     : "Lovy Jain"
-description              : "Enterprise Technical Architect with 13+ years building AI-integrated, cloud-native, and CRM-led solutions for Fortune 500 clients. Specialising in Azure AI, Dynamics 365, Power Platform, and Business Messaging."
+description              : "LovyVerse is Lovy Jain's technical blog on practical enterprise AI, cloud architecture, and Microsoft platform engineering."
 url                      : "https://lovyjain.github.io"
 baseurl                  : ""
 repository               : "lovyjain/lovyjain.github.io"
 teaser                   : "/assets/images/teaser.jpg"
 logo                     :
-masthead_title           : "Lovy Jain"
+masthead_title           : "LovyVerse"
 breadcrumbs              : true
 words_per_minute         : 200
 enable_copy_code_button  : true
@@ -75,9 +75,8 @@ author:
   name     : "Lovy Jain"
   avatar   : "/assets/images/profile.jpg"
   bio      : >
-    Enterprise Technical Architect & AI Solutions Specialist.
-    13+ years delivering AI, CRM, and cloud-native solutions for Fortune 500 clients.
-    Building **[JainKwiz](https://jainkwiz.com)** on the side.
+    Builder of practical enterprise AI systems.
+    Sharing architecture notes, implementation lessons, and platform strategy from the field.
   location : "📍 Delhi-NCR, India"
   email    : "lovyjain18@gmail.com"
   links:
