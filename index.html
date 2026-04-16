@@ -309,8 +309,30 @@ h2{
 .cert-info p{font-size:0.75rem;color:var(--muted)}
 .cert-info span{font-size:0.7rem;color:var(--faint);display:block;margin-top:3px}
 
+/* BLOG */
+#blog{background:var(--bg)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+.blog-card{
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:var(--rl);overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:all 0.25s;text-decoration:none;color:inherit;
+}
+.blog-card:hover{border-color:var(--border2);transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,0.4)}
+.blog-card-top{padding:1.5rem 1.5rem 0;display:flex;justify-content:space-between;align-items:flex-start}
+.blog-tag{
+  font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;
+  padding:4px 10px;border-radius:6px;
+  background:rgba(74,158,255,0.1);color:var(--accent2);
+}
+.blog-date{font-size:0.7rem;color:var(--faint)}
+.blog-body{padding:1.25rem 1.5rem;flex:1}
+.blog-card h3{font-size:0.95rem;font-weight:600;margin-bottom:0.5rem;letter-spacing:-0.01em;line-height:1.4}
+.blog-excerpt{font-size:0.8rem;color:var(--muted);line-height:1.65;font-weight:300}
+.blog-footer{padding:0.85rem 1.5rem;border-top:1px solid var(--border);font-size:0.75rem;color:var(--accent);font-weight:500}
+
 /* EDUCATION */
-#education{background:var(--bg)}
+#education{background:var(--bg2)}
 .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
 .edu-card{
   background:var(--bg2);border:1px solid var(--border);border-radius:var(--rl);
@@ -367,7 +389,7 @@ footer a:hover{color:var(--muted)}
 
 /* RESPONSIVE */
 @media(max-width:900px){
-  .about-wrap,.exp-grid,.edu-grid,.proj-grid,.int-grid{grid-template-columns:1fr}
+  .about-wrap,.exp-grid,.edu-grid,.proj-grid,.int-grid,.blog-grid{grid-template-columns:1fr}
   .hero-top{flex-direction:column;gap:1rem}
   .hero-available{text-align:left}
   .hero-bottom{flex-direction:column;align-items:flex-start}
@@ -392,6 +414,7 @@ footer a:hover{color:var(--muted)}
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#certifications">Certs</a></li>
+    <li><a href="#blog">Blog</a></li>
     <li><a href="#contact" class="nav-cta">Say Hello</a></li>
   </ul>
   <button class="nav-menu-btn" onclick="scrollTo(0,0)">Menu ↑</button>
@@ -423,6 +446,7 @@ footer a:hover{color:var(--muted)}
         <div class="stat"><div class="stat-n">13<sup>+</sup></div><div class="stat-l">Years</div></div>
         <div class="stat"><div class="stat-n">10<sup>+</sup></div><div class="stat-l">Clients</div></div>
         <div class="stat"><div class="stat-n">20<sup>+</sup></div><div class="stat-l">Projects</div></div>
+        <div class="stat"><div class="stat-n">6</div><div class="stat-l">Articles</div></div>
       </div>
       <div class="hero-scroll">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
@@ -675,6 +699,70 @@ footer a:hover{color:var(--muted)}
   </div>
 </section>
 
+<!-- BLOG -->
+<section id="blog">
+  <div class="s-label">Writing</div>
+  <h2>From the Blog</h2>
+  <p class="s-intro">Architecture patterns, AI experiments, and lessons from enterprise delivery and product building.</p>
+  <div class="blog-grid">
+
+    <a href="/azure/ai/sharepoint/azure-openai-sharepoint-rag/" class="blog-card reveal">
+      <div class="blog-card-top"><span class="blog-tag">Azure · AI</span><span class="blog-date">Apr 10, 2026</span></div>
+      <div class="blog-body">
+        <h3>Building RAG Pipelines with Azure OpenAI and SharePoint</h3>
+        <p class="blog-excerpt">Production-tested architecture for grounding LLMs in enterprise SharePoint knowledge — permission-aware retrieval, hybrid search, and citation-first prompt design.</p>
+      </div>
+      <div class="blog-footer">Read article →</div>
+    </a>
+
+    <a href="/power-platform/governance/enterprise/power-platform-governance/" class="blog-card reveal">
+      <div class="blog-card-top"><span class="blog-tag">Power Platform</span><span class="blog-date">Apr 12, 2026</span></div>
+      <div class="blog-body">
+        <h3>Power Platform Governance at Scale</h3>
+        <p class="blog-excerpt">Lessons from implementing governance frameworks for global enterprises — environment strategy, DLP policies, CoE Starter Kit, and ALM with DevOps.</p>
+      </div>
+      <div class="blog-footer">Read article →</div>
+    </a>
+
+    <a href="/product/saas/azure/jainkwiz-saas-journey/" class="blog-card reveal">
+      <div class="blog-card-top"><span class="blog-tag">Product · SaaS</span><span class="blog-date">Apr 14, 2026</span></div>
+      <div class="blog-body">
+        <h3>JainKwiz: What Building a SaaS Product Taught Me That Enterprise Work Never Did</h3>
+        <p class="blog-excerpt">The architecture, product decisions, and hard lessons from building a gamified Jain learning platform from zero to production as a solo founder.</p>
+      </div>
+      <div class="blog-footer">Read article →</div>
+    </a>
+
+    <a href="/sharepoint/spfx/microsoft365/spfx-best-practices/" class="blog-card reveal">
+      <div class="blog-card-top"><span class="blog-tag">SharePoint · SPFx</span><span class="blog-date">Apr 15, 2026</span></div>
+      <div class="blog-body">
+        <h3>SPFx Development Best Practices: Hard-Won Lessons from Production Projects</h3>
+        <p class="blog-excerpt">Project structure, TypeScript discipline, performance patterns, CSP handling, and deployment practices for enterprise-grade SharePoint Framework solutions.</p>
+      </div>
+      <div class="blog-footer">Read article →</div>
+    </a>
+
+    <a href="/azure/ai/copilot-d365/" class="blog-card reveal">
+      <div class="blog-card-top"><span class="blog-tag">AI · D365</span><span class="blog-date">Apr 17, 2026</span></div>
+      <div class="blog-body">
+        <h3>Copilot Studio + D365: Building Intelligent CRM Experiences</h3>
+        <p class="blog-excerpt">How Copilot Studio, Dataverse, Power Automate, and Azure OpenAI combine to create AI-first CRM interactions that reduce manual effort and improve decision-making.</p>
+      </div>
+      <div class="blog-footer">Read article →</div>
+    </a>
+
+    <a href="/13-years-lessons/" class="blog-card reveal">
+      <div class="blog-card-top"><span class="blog-tag">Career</span><span class="blog-date">Apr 18, 2026</span></div>
+      <div class="blog-body">
+        <h3>13 Lessons from 13 Years as a Microsoft Technology Architect</h3>
+        <p class="blog-excerpt">Distilled wisdom from 13 years building enterprise systems — on simplicity, trade-offs, communication, continuous learning, and building your own products.</p>
+      </div>
+      <div class="blog-footer">Read article →</div>
+    </a>
+
+  </div>
+</section>
+
 <!-- EDUCATION -->
 <section id="education">
   <div class="s-label">Education</div>
@@ -741,8 +829,14 @@ footer a:hover{color:var(--muted)}
 
 <!-- FOOTER -->
 <footer>
-  <span>© 2025 Lovy Jain · Technical Architect &amp; AI Solutions Consultant</span>
- </footer>
+  <span>© 2026 Lovy Jain · Technical Architect &amp; AI Solutions Consultant</span>
+  <span>
+    <a href="/about/">About</a> ·
+    <a href="#blog">Blog</a> ·
+    <a href="/jainkwiz/">JainKwiz</a> ·
+    <a href="https://linkedin.com/in/jainlovy" target="_blank">LinkedIn</a>
+  </span>
+</footer>
 
 <script>
 // Sticky nav
