@@ -7,6 +7,8 @@ author_profile: true
 
 ## LovyVerse: building practical AI systems for real teams
 
+![Lovy Jain profile photo](/assets/images/profile.jpg){: .align-center style="max-width: 280px; border-radius: 12px;"}
+
 Hi, I'm **Lovy Jain** — a Technical Architect focused on turning emerging AI ideas into dependable, enterprise-ready products.
 
 I work at the intersection of:
