@@ -1,0 +1,11 @@
+{% if post.read_time %}
+  <span class="page__meta-readtime">
+    <i class="fas fa-fw fa-clock"></i>
+    {% assign words = post.content | strip_html | number_of_words %}
+    {% if words < 360 %}
+      less than 1 minute read
+    {% else %}
+      {{ words | divided_by: 180 }} minute read
+    {% endif %}
+  </span>
+{% endif %}

@@ -1,0 +1,20 @@
+inherit_from_path: .
+inherit_gem:
+  rubocop-github: config/default.yml
+
+AllCops:
+  TargetRubyVersion: 2.7
+  Exclude:
+    - bin/**/*
+    - vendor/**/*
+    - node_modules/**/*
+
+Metrics/LineLength:
+  Max: 120
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+
+Style/Documentation:
+  Enabled: false

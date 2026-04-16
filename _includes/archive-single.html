@@ -1,0 +1,30 @@
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+{%- if include.type == "list" -%}
+  <div class="list__item">
+    <article class="archive__item" itemscope itemtype="https://schema.org/BlogPosting">
+      <h2 class="archive__item-title" itemprop="headline">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
+      <div class="archive__item-excerpt" itemprop="description">
+        {{ post.excerpt | strip_html | truncatewords: 50 }}
+      </div>
+      <p class="page__meta">
+        <span class="page__meta-date">
+          <i class="fas fa-fw fa-calendar-alt"></i>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
+        </span>
+        {% if post.read_time %}
+          {% include read-time.html %}
+        {% endif %}
+      </p>
+    </article>
+  </div>
+{%- elsif include.type == "grid" -%}
+  <div class="grid__item">
+    <article class="archive__item" itemscope itemtype="https://schema.org/BlogPosting">
+      <h3 class="archive__item-title" itemprop="headline">
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h3>
+    </article>
+  </div>
+{%- endif -%}

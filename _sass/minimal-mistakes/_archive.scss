@@ -1,0 +1,23 @@
+/* Archive Page Styles */
+
+.archive__subtitle {
+  margin-top: 1.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid $border-color;
+  font-size: 1.5rem;
+}
+
+.archive__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding: 0.5em 0;
+    border-bottom: 1px solid $border-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{% assign skip_links = site.data.ui-text[site.locale].skip_links | default: "Skip links" %}
+{% assign skip_primary_nav = site.data.ui-text[site.locale].skip_primary_nav | default: "Skip to primary navigation" %}
+{% assign skip_content = site.data.ui-text[site.locale].skip_content | default: "Skip to content" %}
+{% assign skip_footer = site.data.ui-text[site.locale].skip_footer | default: "Skip to footer" %}
+
+<nav class="skip-links">
+  <h2 class="skip-links__label">{{ skip_links }}</h2>
+  <ul>
+    <li><a href="#site-nav" class="skip-links__link">{{ skip_primary_nav }}</a></li>
+    <li><a href="#main" class="skip-links__link">{{ skip_content }}</a></li>
+    <li><a href="#site-footer" class="skip-links__link">{{ skip_footer }}</a></li>
+  </ul>
+</nav>

@@ -1,0 +1,17 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+{% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% for year in postsByYear %}
+  <section id="y{{ year.name }}" class="taxonomy__section">
+    <h2 class="archive__subtitle">{{ year.name }}</h2>
+    <div class="taxonomy__content">
+      {% for post in year.items %}
+        {% include archive-single.html type="grid" %}
+      {% endfor %}
+    </div>
+  </section>
+{% endfor %}

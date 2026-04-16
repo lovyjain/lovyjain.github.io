@@ -1,0 +1,24 @@
+{
+  "name": "lovyjain-blog",
+  "version": "1.0.0",
+  "description": "Lovy Jain's personal website and blog",
+  "main": "index.html",
+  "scripts": {
+    "build": "bundle exec jekyll build",
+    "serve": "bundle exec jekyll serve --livereload",
+    "dev": "bundle exec jekyll serve --livereload --incremental",
+    "clean": "bundle exec jekyll clean"
+  },
+  "keywords": [
+    "jekyll",
+    "blog",
+    "portfolio",
+    "minimal-mistakes"
+  ],
+  "author": "Lovy Jain",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lovyjain/lovyjain.github.io.git"
+  }
+}

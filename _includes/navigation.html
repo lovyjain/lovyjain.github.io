@@ -1,0 +1,14 @@
+<!-- Main site navigation -->
+{% assign navigation = site.data.navigation[site.lang] | default: site.data.navigation.en %}
+
+<div class="masthead__menu">
+  <ul class="masthead__menu-list">
+    {% for link in navigation.main %}
+      <li class="masthead__menu-item">
+        <a href="{{ link.url | relative_url }}" class="masthead__menu-link"{% if link.description %} title="{{ link.description }}"{% endif %}>
+          {{ link.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

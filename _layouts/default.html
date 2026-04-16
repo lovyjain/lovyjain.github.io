@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<div class="c-archive">
+  {% unless page.header.overlay_color or page.header.overlay_image %}
+    <header class="page__hero">
+      {% if page.header.image %}
+        <div class="page__hero-image"
+          style="background-image: url('{{ page.header.image | relative_url }}')">
+        </div>
+      {% endif %}
+    </header>
+  {% endunless %}
+
+  <div class="page__container">
+    {{ content }}
+  </div>
+</div>

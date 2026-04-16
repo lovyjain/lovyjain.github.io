@@ -1,0 +1,22 @@
+/* Sidebar Styles */
+
+.sidebar {
+  display: none;
+  margin-bottom: 1em;
+
+  @include breakpoint($large) {
+    float: left;
+    width: $sidebar-width;
+    opacity: 0.9;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.sidebar__content {
+  padding: 1em;
+}
