@@ -45,6 +45,8 @@ RAG changes this fundamentally. Instead of keyword search, users ask natural lan
 
 Here is the architecture I have deployed across multiple enterprise clients:
 
+![Azure OpenAI + SharePoint RAG architecture](/assets/images/posts/azure-openai-sharepoint-rag.svg)
+
 ```
 SharePoint Online
       │

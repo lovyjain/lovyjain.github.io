@@ -29,7 +29,11 @@ enable_copy_code_button  : true
 # Comments
 # =============================================================================
 comments:
-  provider               : false  # "disqus" | "discourse" | "facebook" | "utterances" | false
+  provider               : "utterances"  # "disqus" | "discourse" | "facebook" | "utterances" | false
+  utterances:
+    theme                : "github-dark"
+    issue_term           : "pathname"
+    repo                 : "lovyjain/lovyjain.github.io"
 
 # =============================================================================
 # Search
@@ -59,9 +63,9 @@ social:
 # Analytics
 # =============================================================================
 analytics:
-  provider               : false  # "google-gtag" | false
+  provider               : "google-gtag"  # "google-gtag" | false
   google:
-    tracking_id          :
+    tracking_id          : "G-XXXXXXXXXX"
     anonymize_ip         : false
 
 # =============================================================================
@@ -185,6 +189,19 @@ permalink    : /:categories/:title/
 paginate     : 6
 paginate_path: /page:num/
 timezone     : "Asia/Kolkata"
+
+# =============================================================================
+# Defaults
+# =============================================================================
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
 
 # =============================================================================
 # Plugins

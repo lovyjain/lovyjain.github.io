@@ -33,3 +33,15 @@ Blog cards pull from `site.posts` automatically. Add or edit posts under `_posts
 - SEO tags rendered via `{% seo %}` in `_layouts/brand.html`.
 - Minimal JavaScript and optimized SVG placeholders keep initial load light.
 - Smooth scrolling enabled via CSS.
+
+### 6) Blog experience and post media
+- Blog index (`/blog/`) uses Minimal Mistakes `home` layout with author sidebar and list entries for a clean two-column reading experience.
+- All posts can reference shared media from `assets/images/posts/`, for example:
+  - `![Diagram](/assets/images/posts/azure-openai-sharepoint-rag.svg)`
+
+### 7) Comments and analytics providers
+- Comment provider is configured with **Utterances** in `_config.yml`.
+- Analytics provider is configured with **Google gtag** in `_config.yml`.
+- Update placeholder values before production use:
+  - `analytics.google.tracking_id`
+  - `comments.utterances.repo` (if your repository changes)
