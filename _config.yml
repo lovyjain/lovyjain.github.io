@@ -4,7 +4,7 @@
 # theme                  : "minimal-mistakes-jekyll"
 remote_theme             : "mmistakes/minimal-mistakes"
 
-minimal_mistakes_skin    : "dark"  # "air" | "aqua" | "contrast" | "dark" | "dirt" | "neon" | "mint" | "plum" | "sunrise"
+minimal_mistakes_skin    : "air"  # "air" | "aqua" | "contrast" | "dark" | "dirt" | "neon" | "mint" | "plum" | "sunrise"
 
 # =============================================================================
 # Site Settings
@@ -31,7 +31,7 @@ enable_copy_code_button  : true
 comments:
   provider               : "utterances"  # "disqus" | "discourse" | "facebook" | "utterances" | false
   utterances:
-    theme                : "github-dark"
+    theme                : "github-light"
     issue_term           : "pathname"
     repo                 : "lovyjain/lovyjain.github.io"
 
@@ -190,19 +190,6 @@ paginate_path: /page:num/
 timezone     : "Asia/Kolkata"
 
 # =============================================================================
-# Defaults
-# =============================================================================
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-
-# =============================================================================
 # Plugins
 # =============================================================================
 plugins:
@@ -252,7 +239,7 @@ defaults:
       author_profile : true
       read_time      : true
       show_date      : true
-      comments       : false
+      comments       : true
       share          : true
       related        : true
 
