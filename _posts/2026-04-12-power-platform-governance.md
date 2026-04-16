@@ -1,9 +1,27 @@
 ---
 title: "Power Platform Governance at Scale: Lessons from Global Enterprise Deployments"
 date: 2026-04-12
+last_modified_at: 2026-04-12
 layout: single
-categories: [power-platform, governance, enterprise]
-tags: [Power Platform, Power Apps, Power Automate, Governance, CoE, DLP, Microsoft 365]
+author_profile: true
+read_time: true
+show_date: true
+toc: true
+toc_label: "Contents"
+toc_sticky: true
+categories:
+  - power-platform
+  - governance
+  - enterprise
+tags:
+  - Power Platform
+  - Power Apps
+  - Power Automate
+  - Governance
+  - CoE
+  - DLP
+  - Microsoft 365
+excerpt: "Lessons from implementing governance frameworks for global enterprises — environment strategy, DLP policies, CoE Starter Kit, and ALM with DevOps."
 ---
 
 ## Introduction

@@ -1,7 +1,13 @@
 ---
 layout: single
-title: JainKwiz
+title: "JainKwiz — Gamified Jain Learning Platform"
 permalink: /jainkwiz/
+author_profile: true
+toc: true
+toc_label: "On This Page"
+toc_icon: "gamepad"
+toc_sticky: true
+excerpt: "A modern, gamified learning platform that makes Jain philosophy accessible, engaging, and interactive for the global Jain community. Live at jainkwiz.com."
 ---
 
 # JainKwiz

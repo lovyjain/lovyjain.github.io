@@ -1,864 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lovy Jain — Technical Architect & AI Solutions Consultant</title>
-<meta name="description" content="Lovy Jain — Technical Architect with 13+ years of Microsoft & Azure expertise. Specializing in Azure, SharePoint, Power Platform & AI Solutions.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Neue+Montreal:wght@300;400;500&family=Cabinet+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,800;1,9..144,300;1,9..144,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#0c0c0b;
-  --bg2:#141413;
-  --bg3:#1c1c1a;
-  --surface:#242422;
-  --border:rgba(255,255,255,0.08);
-  --border2:rgba(255,255,255,0.14);
-  --text:#f0ede6;
-  --muted:#8a8780;
-  --faint:#4a4846;
-  --accent:#e8c547;
-  --accent2:#4a9eff;
-  --accent3:#5de8a4;
-  --red:#ff6b4a;
-  --r:14px;
-  --rl:20px;
-  --font-display:'Fraunces',serif;
-  --font-body:'Plus Jakarta Sans',sans-serif;
-}
-html{scroll-behavior:smooth}
-body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+---
+layout: splash
+title: "Lovy Jain"
+header:
+  overlay_color: "#1a1a2e"
+  overlay_filter: 0.6
+  actions:
+    - label: "<i class='fas fa-briefcase'></i> View Experience"
+      url: "/about/"
+      btn_class: "btn--primary btn--large"
+    - label: "<i class='fas fa-envelope'></i> Get in Touch"
+      url: "mailto:lovyjain18@gmail.com"
+      btn_class: "btn--inverse btn--large"
+excerpt: >
+  **Enterprise Technical Architect & AI Solutions Specialist**<br>
+  13+ years designing AI-integrated, cloud-native, and CRM-led solutions<br>
+  for Fortune 500 clients across APAC and global markets
 
-/* SCROLLBAR */
-::-webkit-scrollbar{width:4px}
-::-webkit-scrollbar-track{background:var(--bg)}
-::-webkit-scrollbar-thumb{background:var(--faint);border-radius:2px}
+intro:
+  - excerpt: >
+      Currently at **Nagarro** — leading architecture and pre-sales for AI-integrated enterprise platforms.
+      Clients include **Sodexo**, **BHF**, **Chevron**, **KPMG UK**, **Eli Lilly**, and **Fresenius Kabi**.
+      <br><br>
+      📍 Delhi-NCR, India &nbsp;|&nbsp; 📧 lovyjain18@gmail.com &nbsp;|&nbsp; 📞 +91-9711245951
 
-/* NAV */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:20px 6vw;
-  transition:background 0.3s,border 0.3s;
-}
-nav.scrolled{background:rgba(12,12,11,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
-.nav-logo{
-  font-family:var(--font-display);font-size:1.4rem;font-weight:600;
-  color:var(--text);text-decoration:none;letter-spacing:-0.02em;
-}
-.nav-logo em{font-style:italic;color:var(--accent)}
-.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
-.nav-links a{font-size:0.82rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color 0.2s;letter-spacing:0.02em}
-.nav-links a:hover{color:var(--text)}
-.nav-cta{
-  background:var(--accent)!important;color:var(--bg)!important;
-  padding:8px 20px;border-radius:100px;font-weight:600!important;
-  transition:opacity 0.2s!important;
-}
-.nav-cta:hover{opacity:0.85}
-.nav-menu-btn{display:none;background:none;border:1px solid var(--border2);color:var(--text);padding:8px 14px;border-radius:8px;cursor:pointer;font-size:0.8rem}
+feature_row:
+  - title: "🤖 AI & Agentic Workflows"
+    excerpt: >
+      Azure OpenAI, Copilot Studio, Azure AI Foundry, RAG pipelines, Semantic Kernel, and multi-step agentic
+      automation. Building intelligent enterprise systems that reduce manual effort at scale.
+    url: "/about/#ai--copilot-solutions"
+    btn_label: "Learn More →"
+    btn_class: "btn--primary"
+  - title: "🎯 CRM & D365 Platforms"
+    excerpt: >
+      Microsoft Dynamics 365, Dataverse, Power Platform — end-to-end CRM-led customer engagement,
+      service automation, and business process orchestration for global enterprise clients.
+    url: "/about/#power-platform--d365"
+    btn_label: "Learn More →"
+    btn_class: "btn--primary"
+  - title: "☁️ Azure Cloud Architecture"
+    excerpt: >
+      Scalable, event-driven cloud-native systems using Azure Functions, Service Bus, APIM, Cosmos DB,
+      SignalR, and Azure DevOps CI/CD pipelines.
+    url: "/about/#enterprise-architecture"
+    btn_label: "Learn More →"
+    btn_class: "btn--primary"
 
-/* HERO */
-#hero{
-  min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;
-  padding:0 6vw 8vh;
-  position:relative;overflow:hidden;
-}
-.hero-grid-bg{
-  position:absolute;inset:0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);
-  background-size:60px 60px;
-  mask-image:radial-gradient(ellipse 80% 80% at 50% 0%,black 30%,transparent 100%);
-}
-.hero-glow{
-  position:absolute;top:-20%;left:50%;transform:translateX(-50%);
-  width:700px;height:700px;border-radius:50%;
-  background:radial-gradient(circle,rgba(232,197,71,0.07) 0%,transparent 70%);
-  pointer-events:none;
-}
-.hero-top{
-  position:absolute;top:0;left:0;right:0;
-  display:flex;justify-content:space-between;align-items:flex-start;
-  padding:130px 6vw 0;
-}
-.hero-badge{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(232,197,71,0.1);border:1px solid rgba(232,197,71,0.25);
-  color:var(--accent);
-  padding:7px 16px;border-radius:100px;
-  font-size:0.75rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;
-}
-.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-.hero-available{
-  text-align:right;font-size:0.78rem;color:var(--muted);
-  border:1px solid var(--border);padding:10px 16px;border-radius:10px;
-  background:var(--bg2);
-}
-.hero-available strong{color:var(--accent3);font-weight:600}
-.hero-content{position:relative;z-index:1}
-.hero-name{
-  font-family:var(--font-display);
-  font-size:clamp(4rem,9vw,9rem);
-  font-weight:600;line-height:0.9;
-  letter-spacing:-0.04em;
-  margin-bottom:0.6rem;
-}
-.hero-name em{font-style:italic;color:var(--accent)}
-.hero-role{
-  font-size:clamp(1rem,2vw,1.3rem);
-  color:var(--muted);font-weight:300;
-  margin-bottom:3rem;
-  max-width:600px;
-  border-left:2px solid var(--accent);
-  padding-left:1.25rem;
-}
-.hero-bottom{
-  display:flex;justify-content:space-between;align-items:flex-end;
-  gap:2rem;flex-wrap:wrap;
-}
-.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
-.btn{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:13px 28px;border-radius:100px;
-  font-family:var(--font-body);font-size:0.875rem;font-weight:600;
-  text-decoration:none;transition:all 0.22s;cursor:pointer;border:none;
-}
-.btn-gold{background:var(--accent);color:var(--bg)}
-.btn-gold:hover{background:#f0d060;transform:translateY(-2px)}
-.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border2)}
-.btn-ghost:hover{border-color:var(--muted);transform:translateY(-2px)}
-.hero-scroll{
-  display:flex;align-items:center;gap:10px;
-  font-size:0.75rem;color:var(--faint);letter-spacing:0.08em;text-transform:uppercase;
-  animation:bounce 2.5s ease-in-out infinite;
-}
-@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
-.hero-scroll svg{width:16px;height:16px;stroke:var(--faint)}
-.hero-stats{
-  display:flex;gap:2.5rem;flex-wrap:wrap;
-}
-.stat{text-align:center}
-.stat-n{
-  font-family:var(--font-display);
-  font-size:2.2rem;font-weight:600;line-height:1;
-  color:var(--text);
-}
-.stat-n sup{font-size:1rem;color:var(--accent)}
-.stat-l{font-size:0.72rem;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:0.06em}
+feature_row2:
+  - title: "💼 Enterprise Pre-Sales"
+    excerpt: >
+      Consultative solutions architecture, RFP responses, executive stakeholder workshops, joint
+      architecture sessions, and business case development for Fortune 500 engagements.
+    url: "/about/#key-achievements"
+    btn_label: "View Achievements →"
+    btn_class: "btn--primary"
+  - title: "💬 Business Messaging"
+    excerpt: >
+      Omnichannel customer engagement, WhatsApp Business API, chatbot orchestration, webhook
+      integrations, and AI-powered conversational platforms for modern enterprise communication.
+    url: "/about/"
+    btn_label: "Learn More →"
+    btn_class: "btn--primary"
+  - title: "🙏 JainKwiz — Side Project"
+    excerpt: >
+      Gamified Jain philosophy learning platform with real-time tournaments, AI chatbot, SM-2 spaced
+      repetition, leaderboards, and PWA. Live and growing at jainkwiz.com.
+    url: "/jainkwiz/"
+    btn_label: "Explore JainKwiz →"
+    btn_class: "btn--inverse"
 
-/* SECTIONS */
-section{padding:100px 6vw}
-.s-label{
-  display:inline-flex;align-items:center;gap:10px;
-  font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;
-  color:var(--accent);margin-bottom:1.25rem;
-}
-.s-label::before{content:'';display:block;width:28px;height:1.5px;background:var(--accent)}
-h2{
-  font-family:var(--font-display);
-  font-size:clamp(2.2rem,4.5vw,3.8rem);
-  font-weight:600;letter-spacing:-0.03em;line-height:1.05;
-  margin-bottom:1rem;
-}
-.s-intro{font-size:1rem;color:var(--muted);max-width:520px;margin-bottom:3.5rem;font-weight:300;line-height:1.7}
+feature_row3:
+  - title: "📊 By the Numbers"
+    excerpt: >
+      **13+** years of enterprise experience
+      &nbsp;&nbsp;·&nbsp;&nbsp;
+      **10+** global Fortune 500 clients
+      &nbsp;&nbsp;·&nbsp;&nbsp;
+      **20+** enterprise projects delivered
+      &nbsp;&nbsp;·&nbsp;&nbsp;
+      **10+** engineers led
+      &nbsp;&nbsp;·&nbsp;&nbsp;
+      **6** certifications
+      &nbsp;&nbsp;·&nbsp;&nbsp;
+      **6** technical articles published
 
-/* ABOUT */
-#about{background:var(--bg2)}
-.about-wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:6vw;align-items:start}
-.about-body p{font-size:1rem;color:var(--muted);margin-bottom:1.25rem;font-weight:300;line-height:1.75}
-.about-body strong{color:var(--text);font-weight:500}
-.about-body a{color:var(--accent);text-decoration:none}
-.chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:2rem}
-.chip{
-  padding:6px 16px;border-radius:100px;
-  font-size:0.75rem;font-weight:600;
-  border:1px solid var(--border2);color:var(--muted);
-  transition:all 0.2s;cursor:default;
-}
-.chip:hover,.chip.on{background:var(--accent);color:var(--bg);border-color:var(--accent)}
-.info-box{
-  background:var(--bg3);border:1px solid var(--border);
-  border-radius:var(--rl);overflow:hidden;
-}
-.info-box-header{
-  padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);
-  font-size:0.75rem;font-weight:600;letter-spacing:0.08em;
-  text-transform:uppercase;color:var(--faint);
-}
-.info-row{
-  display:flex;justify-content:space-between;align-items:center;
-  padding:12px 1.5rem;border-bottom:1px solid var(--border);
-  font-size:0.875rem;
-}
-.info-row:last-child{border-bottom:none}
-.ik{color:var(--muted);font-weight:400}
-.iv{color:var(--text);font-weight:500;text-align:right;font-size:0.82rem}
-.ms-badge{
-  margin-top:1.25rem;background:var(--bg3);border:1px solid var(--border);
-  border-radius:var(--r);padding:1.25rem 1.5rem;
-  display:flex;align-items:center;gap:1rem;
-}
-.ms-logo{
-  width:40px;height:40px;border-radius:10px;
-  background:linear-gradient(135deg,#00a4ef,#7fba00,#f25022,#ffb900);
-  display:flex;align-items:center;justify-content:center;
-  font-weight:800;font-size:0.7rem;color:#fff;letter-spacing:-0.05em;
-}
-.ms-info h4{font-size:0.875rem;font-weight:600;margin-bottom:2px}
-.ms-info p{font-size:0.75rem;color:var(--muted)}
+feature_row4:
+  - title: "From the Blog"
+    excerpt: >
+      Writing on enterprise architecture, AI adoption patterns, SharePoint/SPFx, Power Platform governance,
+      and product building. Deep technical dives grounded in real production experience.
+    url: "/blog/"
+    btn_label: "Read the Blog →"
+    btn_class: "btn--primary"
+---
 
-/* SKILLS */
-#skills{background:var(--bg)}
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--rl);overflow:hidden}
-.sk-card{
-  background:var(--bg);padding:1.75rem;
-  transition:background 0.2s;
-}
-.sk-card:hover{background:var(--bg2)}
-.sk-icon{font-size:1.5rem;margin-bottom:1rem;display:block}
-.sk-card h3{font-size:0.95rem;font-weight:600;margin-bottom:1rem;color:var(--text)}
-.sk-pills{display:flex;flex-wrap:wrap;gap:6px}
-.sk-pill{
-  background:var(--bg3);border:1px solid var(--border);
-  border-radius:6px;padding:3px 10px;
-  font-size:0.72rem;color:var(--muted);
-}
+{% include feature_row id="intro" type="center" %}
 
-/* EXPERIENCE */
-#experience{background:var(--bg2)}
-.exp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-.exp-card{
-  background:var(--bg3);border:1px solid var(--border);
-  border-radius:var(--rl);padding:2rem;
-  transition:border-color 0.25s,transform 0.25s;
-  position:relative;overflow:hidden;
-}
-.exp-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;
-  background:linear-gradient(90deg,transparent,var(--accent),transparent);
-  opacity:0;transition:opacity 0.3s;
-}
-.exp-card:hover{border-color:var(--border2);transform:translateY(-3px)}
-.exp-card:hover::before{opacity:1}
-.exp-card.current{border-color:rgba(232,197,71,0.25)}
-.exp-card.current::before{opacity:1}
-.exp-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem}
-.exp-period{
-  font-size:0.72rem;font-weight:600;color:var(--muted);
-  background:var(--surface);padding:4px 10px;border-radius:6px;
-  letter-spacing:0.04em;
-}
-.exp-now{
-  background:rgba(93,232,164,0.12);color:var(--accent3);
-  font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;
-  padding:4px 10px;border-radius:6px;
-}
-.exp-card h3{font-family:var(--font-display);font-size:1.25rem;font-weight:600;letter-spacing:-0.02em;margin-bottom:4px}
-.exp-co{font-size:0.875rem;color:var(--accent);font-weight:500;margin-bottom:1rem}
-.exp-desc{font-size:0.85rem;color:var(--muted);line-height:1.7;font-weight:300;margin-bottom:1.25rem}
-.exp-tags{display:flex;flex-wrap:wrap;gap:6px}
-.exp-tag{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:3px 10px;font-size:0.7rem;color:var(--muted)}
+{% include feature_row %}
 
-/* PROJECTS */
-#projects{background:var(--bg)}
-.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-.proj-card{
-  background:var(--bg2);border:1px solid var(--border);
-  border-radius:var(--rl);overflow:hidden;
-  display:flex;flex-direction:column;
-  transition:all 0.25s;
-}
-.proj-card:hover{border-color:var(--border2);transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,0.4)}
-.proj-top{padding:1.5rem 1.5rem 0;display:flex;justify-content:space-between;align-items:flex-start}
-.proj-emoji{font-size:2rem;line-height:1}
-.proj-status{
-  font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;
-  padding:4px 10px;border-radius:6px;
-}
-.ps-live{background:rgba(93,232,164,0.12);color:var(--accent3)}
-.ps-build{background:rgba(232,197,71,0.1);color:var(--accent)}
-.proj-body{padding:1.25rem 1.5rem;flex:1}
-.proj-card h3{font-size:1rem;font-weight:600;margin-bottom:0.5rem;letter-spacing:-0.01em}
-.proj-desc{font-size:0.82rem;color:var(--muted);line-height:1.65;font-weight:300}
-.proj-footer{padding:1rem 1.5rem;border-top:1px solid var(--border);display:flex;flex-wrap:wrap;gap:5px}
-.pt{background:var(--bg3);border:1px solid var(--border);border-radius:5px;padding:2px 9px;font-size:0.68rem;color:var(--muted)}
+{% include feature_row id="feature_row2" %}
 
-/* CERTIFICATIONS */
-#certifications{background:var(--bg2)}
-.cert-wrap{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1rem}
-.cert-card{
-  background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);
-  padding:1.25rem;display:flex;align-items:center;gap:1rem;
-  transition:all 0.2s;
-}
-.cert-card:hover{border-color:rgba(232,197,71,0.3);background:var(--surface)}
-.cert-icon{
-  min-width:44px;height:44px;border-radius:10px;
-  background:rgba(232,197,71,0.1);border:1px solid rgba(232,197,71,0.2);
-  display:flex;align-items:center;justify-content:center;
-  font-family:var(--font-display);font-size:0.65rem;font-weight:600;
-  color:var(--accent);text-align:center;line-height:1.3;
-}
-.cert-info h4{font-size:0.875rem;font-weight:600;margin-bottom:3px}
-.cert-info p{font-size:0.75rem;color:var(--muted)}
-.cert-info span{font-size:0.7rem;color:var(--faint);display:block;margin-top:3px}
+{% include feature_row id="feature_row3" type="center" %}
 
-/* BLOG */
-#blog{background:var(--bg)}
-.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-.blog-card{
-  background:var(--bg2);border:1px solid var(--border);
-  border-radius:var(--rl);overflow:hidden;
-  display:flex;flex-direction:column;
-  transition:all 0.25s;text-decoration:none;color:inherit;
-}
-.blog-card:hover{border-color:var(--border2);transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,0.4)}
-.blog-card-top{padding:1.5rem 1.5rem 0;display:flex;justify-content:space-between;align-items:flex-start}
-.blog-tag{
-  font-size:0.65rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;
-  padding:4px 10px;border-radius:6px;
-  background:rgba(74,158,255,0.1);color:var(--accent2);
-}
-.blog-date{font-size:0.7rem;color:var(--faint)}
-.blog-body{padding:1.25rem 1.5rem;flex:1}
-.blog-card h3{font-size:0.95rem;font-weight:600;margin-bottom:0.5rem;letter-spacing:-0.01em;line-height:1.4}
-.blog-excerpt{font-size:0.8rem;color:var(--muted);line-height:1.65;font-weight:300}
-.blog-footer{padding:0.85rem 1.5rem;border-top:1px solid var(--border);font-size:0.75rem;color:var(--accent);font-weight:500}
-
-/* EDUCATION */
-#education{background:var(--bg2)}
-.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-.edu-card{
-  background:var(--bg2);border:1px solid var(--border);border-radius:var(--rl);
-  padding:2rem;transition:border-color 0.2s;
-}
-.edu-card:hover{border-color:var(--border2)}
-.edu-yr{font-size:0.72rem;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.75rem}
-.edu-card h3{font-family:var(--font-display);font-size:1.2rem;font-weight:600;letter-spacing:-0.02em;margin-bottom:4px}
-.edu-sch{font-size:0.875rem;color:var(--accent2);margin-bottom:1rem}
-.edu-desc{font-size:0.82rem;color:var(--muted);line-height:1.65;font-weight:300}
-
-/* INTERESTS */
-#interests{background:var(--bg2)}
-.int-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-.int-card{
-  background:var(--bg3);border:1px solid var(--border);border-radius:var(--rl);
-  padding:2rem;text-align:center;transition:all 0.25s;
-}
-.int-card:hover{border-color:var(--border2);transform:translateY(-3px)}
-.int-emoji{font-size:2.5rem;display:block;margin-bottom:1rem}
-.int-card h3{font-size:1rem;font-weight:600;margin-bottom:0.5rem}
-.int-card p{font-size:0.82rem;color:var(--muted);font-weight:300;line-height:1.65}
-
-/* CONTACT */
-#contact{background:var(--bg3);border-top:1px solid var(--border)}
-.contact-inner{max-width:700px}
-.contact-inner h2{margin-bottom:0.75rem}
-.contact-inner .s-intro{margin-bottom:2.5rem}
-.contact-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:4rem}
-.contact-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
-  background:var(--border);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;
-}
-.ci{background:var(--bg2);padding:1.25rem 1.5rem}
-.ci-l{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--faint);margin-bottom:6px}
-.ci-v{font-size:0.9rem;font-weight:500;color:var(--text)}
-.ci-v a{color:var(--accent);text-decoration:none}
-.ci-v a:hover{text-decoration:underline}
-
-/* FOOTER */
-footer{
-  background:var(--bg);border-top:1px solid var(--border);
-  padding:2rem 6vw;display:flex;justify-content:space-between;align-items:center;
-  font-size:0.78rem;color:var(--faint);flex-wrap:wrap;gap:1rem;
-}
-footer a{color:var(--faint);text-decoration:none}
-footer a:hover{color:var(--muted)}
-
-/* ANIMATIONS */
-.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.7s ease,transform 0.7s ease}
-.reveal.show{opacity:1;transform:none}
-.reveal-fast{opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease}
-.reveal-fast.show{opacity:1;transform:none}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .about-wrap,.exp-grid,.edu-grid,.proj-grid,.int-grid,.blog-grid{grid-template-columns:1fr}
-  .hero-top{flex-direction:column;gap:1rem}
-  .hero-available{text-align:left}
-  .hero-bottom{flex-direction:column;align-items:flex-start}
-  .nav-links{display:none}
-  .nav-menu-btn{display:block}
-  .contact-grid{grid-template-columns:1fr}
-}
-@media(max-width:600px){
-  section{padding:70px 5vw}
-  .hero-name{font-size:clamp(3rem,12vw,5rem)}
-}
-</style>
-</head>
-<body>
-
-<!-- NAV -->
-<nav id="nav">
-  <a href="#hero" class="nav-logo">Lovy <em>Jain</em></a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#certifications">Certs</a></li>
-    <li><a href="#blog">Blog</a></li>
-    <li><a href="#contact" class="nav-cta">Say Hello</a></li>
-  </ul>
-  <button class="nav-menu-btn" onclick="scrollTo(0,0)">Menu ↑</button>
-</nav>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-grid-bg"></div>
-  <div class="hero-glow"></div>
-
-  <div class="hero-top">
-    <div class="hero-badge">⚡ Technical Architect · Nagarro</div>
-    <div class="hero-available">
-     
-      Azure · SharePoint · AI · D365
-    </div>
-  </div>
-
-  <div class="hero-content">
-    <div class="hero-name">Lovy<br><em>Jain</em></div>
-    <p class="hero-role">Technical Architect &amp; AI Solutions Consultant · 13+ years building enterprise systems on Microsoft &amp; Azure · Currently at <strong style="color:var(--text)">Nagarro</strong></p>
-
-    <div class="hero-bottom">
-      <div class="hero-actions">
-        <a href="#experience" class="btn btn-gold">View My Work ↓</a>
-        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><div class="stat-n">13<sup>+</sup></div><div class="stat-l">Years</div></div>
-        <div class="stat"><div class="stat-n">10<sup>+</sup></div><div class="stat-l">Clients</div></div>
-        <div class="stat"><div class="stat-n">20<sup>+</sup></div><div class="stat-l">Projects</div></div>
-        <div class="stat"><div class="stat-n">6</div><div class="stat-l">Articles</div></div>
-      </div>
-      <div class="hero-scroll">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-        scroll
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="s-label">About Me</div>
-  <div class="about-wrap">
-    <div class="about-body reveal">
-      <h2>Architect.<br>Builder.<br>AI Enthusiast.</h2>
-      <p>I'm a <strong>Technical Architect &amp; Tech Lead at Nagarro</strong> with 13+ years across the Microsoft stack. I bridge deep technical expertise with business strategy to deliver enterprise solutions that actually move the needle.</p>
-      <p>My work spans <strong>SharePoint, Azure Services, Dynamics 365, Power Platform, React, and .NET Core</strong> for global clients including <strong>Sodexo, DHL, KPMG UK, Eli Lilly, Fresenius Kabi,</strong> and <strong>Chevron</strong>. I lead architecture decisions, mentor engineering teams, and represent the full technical lifecycle from RFP to go-live.</p>
-      <p>Outside work, I'm independently building <strong><a href="https://jainkwiz.com" target="_blank">JainKwiz.com</a></strong> — a gamified Jain religious education platform with AI, live tournaments, and spaced repetition. I'm also completing an <strong>MBA (IT)</strong> with a dissertation on AI in customer service.</p>
-      <div class="chip-row">
-        <span class="chip on">Azure Cloud</span>
-        <span class="chip on">SharePoint</span>
-        <span class="chip">Power Platform</span>
-        <span class="chip">D365</span>
-        <span class="chip">React</span>
-        <span class="chip">.NET Core</span>
-        <span class="chip">GitHub Copilot</span>
-        <span class="chip">Copilot Studio</span>
-        <span class="chip">Azure OpenAI</span>
-      </div>
-    </div>
-    <div class="reveal">
-      <div class="info-box">
-        <div class="info-box-header">Quick Info</div>
-        <div class="info-row"><span class="ik">Location</span><span class="iv">Delhi / Mumbai, India</span></div>
-        <div class="info-row"><span class="ik">Experience</span><span class="iv">13+ Years</span></div>
-        <div class="info-row"><span class="ik">Speciality</span><span class="iv">Microsoft · Azure · AI</span></div>
-        <div class="info-row"><span class="ik">Education</span><span class="iv">MBA (IT) · BTech CSE</span></div>
-        <div class="info-row"><span class="ik">Languages</span><span class="iv">English · Hindi</span></div>
-        <div class="info-row"><span class="ik">Side Project</span><span class="iv">JainKwiz.com</span></div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-  <div class="s-label">Technical Skills</div>
-  <h2>Core Stack</h2>
-  <p class="s-intro">Full-spectrum Microsoft &amp; Azure expertise — from cloud infrastructure to AI-powered enterprise apps.</p>
-  <div class="skills-grid reveal">
-    <div class="sk-card">
-      <span class="sk-icon">☁️</span>
-      <h3>Azure Cloud</h3>
-      <div class="sk-pills">
-        <span class="sk-pill">Azure Functions</span><span class="sk-pill">APIM</span><span class="sk-pill">Service Bus</span><span class="sk-pill">Cosmos DB</span><span class="sk-pill">Key Vault</span><span class="sk-pill">Redis Cache</span><span class="sk-pill">SignalR</span><span class="sk-pill">App Service</span><span class="sk-pill">Static Web Apps</span>
-      </div>
-    </div>
-    <div class="sk-card">
-      <span class="sk-icon">🔷</span>
-      <h3>Microsoft 365 &amp; SharePoint</h3>
-      <div class="sk-pills">
-        <span class="sk-pill">SharePoint Online</span><span class="sk-pill">SPFx</span><span class="sk-pill">MS Graph API</span><span class="sk-pill">Teams</span><span class="sk-pill">Purview</span><span class="sk-pill">M365 Governance</span>
-      </div>
-    </div>
-    <div class="sk-card">
-      <span class="sk-icon">⚡</span>
-      <h3>Power Platform</h3>
-      <div class="sk-pills">
-        <span class="sk-pill">Power Apps</span><span class="sk-pill">Power Automate</span><span class="sk-pill">Copilot Studio</span><span class="sk-pill">PCF Controls</span><span class="sk-pill">Power BI</span><span class="sk-pill">Custom Connectors</span>
-      </div>
-    </div>
-    <div class="sk-card">
-      <span class="sk-icon">🎯</span>
-      <h3>Dynamics 365 / CRM</h3>
-      <div class="sk-pills">
-        <span class="sk-pill">D365 CRM</span><span class="sk-pill">Dataverse</span><span class="sk-pill">FetchXML</span><span class="sk-pill">Plugins</span><span class="sk-pill">D365 F&amp;O</span><span class="sk-pill">AX 2012</span>
-      </div>
-    </div>
-    <div class="sk-card">
-      <span class="sk-icon">⚛️</span>
-      <h3>Frontend &amp; Mobile</h3>
-      <div class="sk-pills">
-        <span class="sk-pill">React</span><span class="sk-pill">React Native</span><span class="sk-pill">Ionic</span><span class="sk-pill">TypeScript</span><span class="sk-pill">Expo</span><span class="sk-pill">PWA</span>
-      </div>
-    </div>
-    <div class="sk-card">
-      <span class="sk-icon">🤖</span>
-      <h3>AI &amp; Copilot</h3>
-      <div class="sk-pills">
-        <span class="sk-pill">GitHub Copilot</span><span class="sk-pill">Copilot Studio</span><span class="sk-pill">Azure OpenAI</span><span class="sk-pill">LangChain</span><span class="sk-pill">Semantic Kernel</span><span class="sk-pill">RAG Pipelines</span>
-      </div>
-    </div>
-    <div class="sk-card">
-      <span class="sk-icon">🛠️</span>
-      <h3>Backend &amp; Data</h3>
-      <div class="sk-pills">
-        <span class="sk-pill">.NET Core / C#</span><span class="sk-pill">Node.js</span><span class="sk-pill">Azure Synapse</span><span class="sk-pill">Databricks</span><span class="sk-pill">Azure Data Factory</span><span class="sk-pill">SQL Server</span>
-      </div>
-    </div>
-    <div class="sk-card">
-      <span class="sk-icon">🔁</span>
-      <h3>DevOps &amp; CI/CD</h3>
-      <div class="sk-pills">
-        <span class="sk-pill">GitHub Actions</span><span class="sk-pill">GitLab CI</span><span class="sk-pill">Azure DevOps</span><span class="sk-pill">SonarQube</span><span class="sk-pill">Docker</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="s-label">Work Experience</div>
-  <h2>Career Journey</h2>
-  <p class="s-intro">From junior engineer to architect — 13+ years across global enterprises.</p>
-  <div class="exp-grid">
-
-    
-
-    <div class="exp-card current reveal">
-      <div class="exp-header">
-        <span class="exp-period">2019 — Present</span>
-        <span class="exp-now">● Current</span>
-      </div>
-      <h3>Technical Architect / Tech Lead</h3>
-      <div class="exp-co">Nagarro</div>
-      <p class="exp-desc">Led architecture &amp; delivery for global clients including Sodexo, DHL, KPMG UK, Eli Lilly, Fresenius Kabi, Chevron, and ExpressJet. Designed modular Azure microservices, SharePoint governance, and D365 CRM platforms. Led teams of 8–15 engineers.</p>
-      <div class="exp-tags">
-        <span class="exp-tag">SharePoint / SPFx</span><span class="exp-tag">Azure Services</span><span class="exp-tag">D365 CRM</span><span class="exp-tag">Power Platform</span><span class="exp-tag">React</span><span class="exp-tag">.NET Core</span>
-      </div>
-    </div>
-
-    <div class="exp-card reveal">
-      <div class="exp-header">
-        <span class="exp-period">2015 — 2019</span>
-      </div>
-      <h3>Senior Software Engineer</h3>
-      <div class="exp-co">Various Microsoft Partners</div>
-      <p class="exp-desc">Built full-stack enterprise applications on the Microsoft stack. Led SharePoint Online migrations, custom web parts, Power Apps forms, and .NET API backends. Introduced CI/CD practices and mentored junior developers.</p>
-      <div class="exp-tags">
-        <span class="exp-tag">SharePoint</span><span class="exp-tag">.NET</span><span class="exp-tag">Power Apps</span><span class="exp-tag">Azure</span><span class="exp-tag">C#</span>
-      </div>
-    </div>
-
-    <div class="exp-card reveal">
-      <div class="exp-header">
-        <span class="exp-period">2012 — 2015</span>
-      </div>
-      <h3>Software Engineer</h3>
-      <div class="exp-co">Early Career</div>
-      <p class="exp-desc">Started career in enterprise software development. Built foundational expertise in Microsoft technologies, SharePoint development, C#, SQL, and web development across manufacturing and services clients.</p>
-      <div class="exp-tags">
-        <span class="exp-tag">C# .NET</span><span class="exp-tag">SharePoint</span><span class="exp-tag">SQL Server</span><span class="exp-tag">JavaScript</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="s-label">Key Projects</div>
-  <h2>Work I'm Proud Of</h2>
-  <p class="s-intro">Enterprise solutions and personal products across AI, cloud, and mobile.</p>
-  <div class="proj-grid">
-
-    <div class="proj-card reveal">
-      <div class="proj-top"><span class="proj-emoji">🙏</span><span class="proj-status ps-build">In Dev</span></div>
-      <div class="proj-body">
-        <h3>JainKwiz — Jain Learning Platform</h3>
-        <p class="proj-desc">Gamified Jain religious education platform with XP/streaks, leaderboards, SM-2 spaced repetition, live tournaments via SignalR, AI chatbot, and PWA. Personal passion project on Azure Static Web Apps.</p>
-      </div>
-      <div class="proj-footer">
-        <span class="pt">React / Ionic</span><span class="pt">Node.js</span><span class="pt">Azure SignalR</span><span class="pt">Cosmos DB</span><span class="pt">PWA</span>
-      </div>
-    </div>
-
-    <div class="proj-card reveal">
-      <div class="proj-top"><span class="proj-emoji">🏢</span><span class="proj-status ps-live">Delivered</span></div>
-      <div class="proj-body">
-        <h3>QR Digital Concierge — Sodexo</h3>
-        <p class="proj-desc">Modular "Lego" architecture integrating D365, Azure Service Bus, Azure Functions, Blob Storage, and Cosmos DB. Multi-step dynamic forms with CIAM integration and iOS/Android builds.</p>
-      </div>
-      <div class="proj-footer">
-        <span class="pt">D365 / Dataverse</span><span class="pt">Azure Service Bus</span><span class="pt">Azure Functions</span><span class="pt">React</span><span class="pt">Ionic</span>
-      </div>
-    </div>
-
-    <div class="proj-card reveal">
-      <div class="proj-top"><span class="proj-emoji">📊</span><span class="proj-status ps-live">Delivered</span></div>
-      <div class="proj-body">
-        <h3>Dataverse → Synapse → Databricks</h3>
-        <p class="proj-desc">End-to-end enterprise data pipeline from D365 Dataverse to Azure Synapse and Databricks. Enabled AI/ML workloads on CRM data with Power BI reporting and ADF orchestration.</p>
-      </div>
-      <div class="proj-footer">
-        <span class="pt">Dataverse</span><span class="pt">Azure Synapse</span><span class="pt">Databricks</span><span class="pt">ADF</span><span class="pt">Power BI</span>
-      </div>
-    </div>
-
-    <div class="proj-card reveal">
-      <div class="proj-top"><span class="proj-emoji">🤖</span><span class="proj-status ps-live">Delivered</span></div>
-      <div class="proj-body">
-        <h3>Copilot Studio Enterprise Bot</h3>
-        <p class="proj-desc">Enterprise Copilot Studio chatbot with Microsoft Purview security, sensitivity labels, and M365 governance. Connected to SharePoint, Teams, and D365 as an integrated AI assistant.</p>
-      </div>
-      <div class="proj-footer">
-        <span class="pt">Copilot Studio</span><span class="pt">Purview</span><span class="pt">SharePoint</span><span class="pt">Azure OpenAI</span>
-      </div>
-    </div>
-
-    <div class="proj-card reveal">
-      <div class="proj-top"><span class="proj-emoji">📁</span><span class="proj-status ps-live">Delivered</span></div>
-      <div class="proj-body">
-        <h3>ECM Platform — Financial Services</h3>
-        <p class="proj-desc">HLD and records management for ECM RFP. SharePoint Online governance, branding, custom SPFx web parts, and document lifecycle management for a global financial organization.</p>
-      </div>
-      <div class="proj-footer">
-        <span class="pt">SharePoint Online</span><span class="pt">SPFx</span><span class="pt">M365 Governance</span><span class="pt">Purview</span>
-      </div>
-    </div>
-
-    <div class="proj-card reveal">
-      <div class="proj-top"><span class="proj-emoji">🌿</span><span class="proj-status ps-live">Delivered</span></div>
-      <div class="proj-body">
-        <h3>Carbon Tracker — Fiji Airways</h3>
-        <p class="proj-desc">SharePoint-based carbon emissions tracking with Qualtrics API integration and CSP security hardening. Custom SPFx components to monitor and report on fleet sustainability metrics.</p>
-      </div>
-      <div class="proj-footer">
-        <span class="pt">SharePoint / SPFx</span><span class="pt">Qualtrics API</span><span class="pt">Power Automate</span><span class="pt">CSP</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section id="certifications">
-  <div class="s-label">Certifications</div>
-  <h2>Microsoft Credentials</h2>
-  <p class="s-intro">Validated expertise across Microsoft cloud, AI, data, and developer platforms.</p>
-  <div class="cert-wrap">
-    <div class="cert-card reveal-fast"><div class="cert-icon">AZ<br>900</div><div class="cert-info"><h4>Azure Fundamentals</h4><p>Microsoft Certified</p><span>Microsoft</span></div></div>
-    <div class="cert-card reveal-fast"><div class="cert-icon">MS<br>900</div><div class="cert-info"><h4>M365 Fundamentals</h4><p>Microsoft Certified</p><span>Microsoft</span></div></div>
-    <div class="cert-card reveal-fast"><div class="cert-icon">PL<br>900</div><div class="cert-info"><h4>Power Platform Fundamentals</h4><p>Microsoft Certified</p><span>Microsoft</span></div></div>
-    <div class="cert-card reveal-fast"><div class="cert-icon">MB<br>910</div><div class="cert-info"><h4>D365 Fundamentals (CRM)</h4><p>Microsoft Certified</p><span>Microsoft</span></div></div>
-    <div class="cert-card reveal-fast"><div class="cert-icon">AI<br>900</div><div class="cert-info"><h4>Azure AI Fundamentals</h4><p>Microsoft Certified</p><span>Microsoft</span></div></div>
-    <div class="cert-card reveal-fast"><div class="cert-icon">GH<br>CPL</div><div class="cert-info"><h4>GitHub Copilot</h4><p>AI Developer Productivity</p><span>GitHub / Microsoft</span></div></div>
-    <div class="cert-card reveal-fast"><div class="cert-icon">MCT</div><div class="cert-info"><h4>Microsoft Certified Trainer</h4><p>MCT Program</p><span>Pursuing / Renewal</span></div></div>
-    <div class="cert-card reveal-fast"><div class="cert-icon">PL<br>400</div><div class="cert-info"><h4>Power Platform Developer</h4><p>Associate Level</p><span>Target 2025</span></div></div>
-  </div>
-</section>
-
-<!-- BLOG -->
-<section id="blog">
-  <div class="s-label">Writing</div>
-  <h2>From the Blog</h2>
-  <p class="s-intro">Architecture patterns, AI experiments, and lessons from enterprise delivery and product building.</p>
-  <div class="blog-grid">
-
-    <a href="/azure/ai/sharepoint/azure-openai-sharepoint-rag/" class="blog-card reveal">
-      <div class="blog-card-top"><span class="blog-tag">Azure · AI</span><span class="blog-date">Apr 10, 2026</span></div>
-      <div class="blog-body">
-        <h3>Building RAG Pipelines with Azure OpenAI and SharePoint</h3>
-        <p class="blog-excerpt">Production-tested architecture for grounding LLMs in enterprise SharePoint knowledge — permission-aware retrieval, hybrid search, and citation-first prompt design.</p>
-      </div>
-      <div class="blog-footer">Read article →</div>
-    </a>
-
-    <a href="/power-platform/governance/enterprise/power-platform-governance/" class="blog-card reveal">
-      <div class="blog-card-top"><span class="blog-tag">Power Platform</span><span class="blog-date">Apr 12, 2026</span></div>
-      <div class="blog-body">
-        <h3>Power Platform Governance at Scale</h3>
-        <p class="blog-excerpt">Lessons from implementing governance frameworks for global enterprises — environment strategy, DLP policies, CoE Starter Kit, and ALM with DevOps.</p>
-      </div>
-      <div class="blog-footer">Read article →</div>
-    </a>
-
-    <a href="/product/saas/azure/jainkwiz-saas-journey/" class="blog-card reveal">
-      <div class="blog-card-top"><span class="blog-tag">Product · SaaS</span><span class="blog-date">Apr 14, 2026</span></div>
-      <div class="blog-body">
-        <h3>JainKwiz: What Building a SaaS Product Taught Me That Enterprise Work Never Did</h3>
-        <p class="blog-excerpt">The architecture, product decisions, and hard lessons from building a gamified Jain learning platform from zero to production as a solo founder.</p>
-      </div>
-      <div class="blog-footer">Read article →</div>
-    </a>
-
-    <a href="/sharepoint/spfx/microsoft365/spfx-best-practices/" class="blog-card reveal">
-      <div class="blog-card-top"><span class="blog-tag">SharePoint · SPFx</span><span class="blog-date">Apr 15, 2026</span></div>
-      <div class="blog-body">
-        <h3>SPFx Development Best Practices: Hard-Won Lessons from Production Projects</h3>
-        <p class="blog-excerpt">Project structure, TypeScript discipline, performance patterns, CSP handling, and deployment practices for enterprise-grade SharePoint Framework solutions.</p>
-      </div>
-      <div class="blog-footer">Read article →</div>
-    </a>
-
-    <a href="/azure/ai/copilot-d365/" class="blog-card reveal">
-      <div class="blog-card-top"><span class="blog-tag">AI · D365</span><span class="blog-date">Apr 17, 2026</span></div>
-      <div class="blog-body">
-        <h3>Copilot Studio + D365: Building Intelligent CRM Experiences</h3>
-        <p class="blog-excerpt">How Copilot Studio, Dataverse, Power Automate, and Azure OpenAI combine to create AI-first CRM interactions that reduce manual effort and improve decision-making.</p>
-      </div>
-      <div class="blog-footer">Read article →</div>
-    </a>
-
-    <a href="/13-years-lessons/" class="blog-card reveal">
-      <div class="blog-card-top"><span class="blog-tag">Career</span><span class="blog-date">Apr 18, 2026</span></div>
-      <div class="blog-body">
-        <h3>13 Lessons from 13 Years as a Microsoft Technology Architect</h3>
-        <p class="blog-excerpt">Distilled wisdom from 13 years building enterprise systems — on simplicity, trade-offs, communication, continuous learning, and building your own products.</p>
-      </div>
-      <div class="blog-footer">Read article →</div>
-    </a>
-
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section id="education">
-  <div class="s-label">Education</div>
-  <h2>Academic Background</h2>
-  <p class="s-intro">Computer science foundation paired with technology management expertise.</p>
-  <div class="edu-grid">
-    <div class="edu-card reveal">
-      <div class="edu-yr">2023 — 2025 · In Progress</div>
-      <h3>MBA — Information Technology</h3>
-      <div class="edu-sch">Mewar University</div>
-      <p class="edu-desc">Dissertation: "AI in Customer Service — A Case Study of Verizon." Research covers enterprise AI adoption, conversational AI platforms, and customer experience transformation through intelligent automation.</p>
-    </div>
-    <div class="edu-card reveal">
-      <div class="edu-yr">2008 — 2012 · Completed</div>
-      <h3>B.Tech — Computer Science &amp; Engineering</h3>
-      <div class="edu-sch">GBTU (Now AKTU), Lucknow</div>
-      <p class="edu-desc">Foundation in computer science, software engineering, algorithms, and data structures. Developed early interest in enterprise software and Microsoft technologies through academic and project work.</p>
-    </div>
-  </div>
-</section>
-
-<!-- INTERESTS -->
-<section id="interests">
-  <div class="s-label">Beyond Work</div>
-  <h2>Interests &amp; Passions</h2>
-  <p class="s-intro">What keeps me energized outside the office.</p>
-  <div class="int-grid">
-    <div class="int-card reveal">
-      <span class="int-emoji">🙏</span>
-      <h3>Jain Philosophy</h3>
-      <p>Deep interest in Jain philosophy and community. Organizer of large-scale Jain events including Panch Kalyanak at Shivaji Park. Building JainKwiz to make Jain education accessible and engaging digitally.</p>
-    </div>
-    <div class="int-card reveal">
-      <span class="int-emoji">🤖</span>
-      <h3>AI &amp; Future of Work</h3>
-      <p>Passionate about GitHub Copilot, AI developer productivity, and how AI is reshaping enterprise software. Exploring LangChain, Semantic Kernel, and RAG architectures for intelligent applications.</p>
-    </div>
-    <div class="int-card reveal">
-      <span class="int-emoji">📚</span>
-      <h3>Research &amp; Writing</h3>
-      <p>Pursuing doctoral-level interest in Jain philosophy. Currently completing MBA dissertation on AI in customer service. Enjoy writing on technology architecture and enterprise AI adoption patterns.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact-inner">
-    <div class="s-label">Contact</div>
-    <h2>Let's Connect</h2>
-    <p class="s-intro">Open to conversations about enterprise AI, Microsoft solutions, architecture consulting, or collaboration on something meaningful.</p>
-    <div class="contact-btns">
-      <a href="mailto:lovyjain18@gmail.com" class="btn btn-gold">✉ Send Email</a>
-      <a href="https://linkedin.com/in/jainlovy" target="_blank" class="btn btn-ghost">LinkedIn →</a>
-      <a href="https://jainkwiz.com" target="_blank" class="btn btn-ghost">🙏 JainKwiz →</a>
-    </div>
-    <div class="contact-grid">
-      <div class="ci"><div class="ci-l">Current Role</div><div class="ci-v">Technical Architect<br>Nagarro</div></div>
-      <div class="ci"><div class="ci-l">Location</div><div class="ci-v">Delhi / Mumbai, India</div></div>
-      <div class="ci"><div class="ci-l">Expertise</div><div class="ci-v">Azure · Microsoft 365 · AI</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <span>© 2026 Lovy Jain · Technical Architect &amp; AI Solutions Consultant</span>
-  <span>
-    <a href="/about/">About</a> ·
-    <a href="#blog">Blog</a> ·
-    <a href="/jainkwiz/">JainKwiz</a> ·
-    <a href="https://linkedin.com/in/jainlovy" target="_blank">LinkedIn</a>
-  </span>
-</footer>
-
-<script>
-// Sticky nav
-const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 60);
-});
-
-// Scroll reveal
-const ro = new IntersectionObserver((entries) => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) {
-      setTimeout(() => e.target.classList.add('show'), i * 90);
-    }
-  });
-}, { threshold: 0.08 });
-document.querySelectorAll('.reveal, .reveal-fast').forEach(el => ro.observe(el));
-
-// Chip toggle
-document.querySelectorAll('.chip').forEach(c => {
-  c.addEventListener('click', () => c.classList.toggle('on'));
-});
-</script>
-</body>
-</html>
+{% include feature_row id="feature_row4" type="center" %}
