@@ -1,8 +1,8 @@
 # =============================================================================
-# Theme — using local gemspec (minimal-mistakes-jekyll.gemspec)
+# Theme — GitHub Pages compatible remote theme setup
 # =============================================================================
-theme                    : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"  # uncomment for classic GitHub Pages (no Actions)
+# theme                  : "minimal-mistakes-jekyll"
+remote_theme             : "mmistakes/minimal-mistakes"
 
 minimal_mistakes_skin    : "dark"  # "air" | "aqua" | "contrast" | "dark" | "dirt" | "neon" | "mint" | "plum" | "sunrise"
 
