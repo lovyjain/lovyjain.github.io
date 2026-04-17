@@ -1,7 +1,0 @@
-/* Responsive breakpoint mixin */
-
-@mixin breakpoint($max-width) {
-  @media (max-width: $max-width) {
-    @content;
-  }
-}
