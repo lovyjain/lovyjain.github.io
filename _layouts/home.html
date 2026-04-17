@@ -6,9 +6,16 @@
   <body>
     {% include masthead.html %}
     <main id="main" class="page">
+      {% include sections/hero.html %}
+      {% include sections/about.html %}
+      {% include sections/experience.html %}
+      {% include sections/skills.html %}
+      {% include sections/projects.html %}
+      {% include sections/blog.html %}
+      {% include sections/contact.html %}
       {{ content }}
     </main>
-    {% include footer/default.html %}
+    {% include footer.html %}
     {% include scripts.html %}
   </body>
 </html>
