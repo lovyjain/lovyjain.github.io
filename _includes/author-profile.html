@@ -1,0 +1,10 @@
+<section class="author-profile">
+  <div class="author-profile__avatar">
+    <img src="{{ site.author.avatar | default: '/assets/images/profile-placeholder.svg' | relative_url }}" alt="Author avatar">
+  </div>
+  <div class="author-profile__details">
+    <h2>{{ site.author.name }}</h2>
+    <p>{{ site.author.bio }}</p>
+    {% include author-profile-custom-links.html %}
+  </div>
+</section>

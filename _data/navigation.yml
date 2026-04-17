@@ -4,7 +4,13 @@ main:
     url: /year-archive/
   - title: "Categories"
     url: /categories/
+  - title: "Tags"
+    url: /tags/
   - title: "About"
-    url: /about-me/
+    url: /about/
   - title: "Contact"
-    url: /contact-me/
+    url: /contact/
+  - title: "Example"
+    url: /example/
+  - title: "Search"
+    url: /search/

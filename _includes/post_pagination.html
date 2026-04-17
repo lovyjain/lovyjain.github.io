@@ -1,0 +1,8 @@
+<nav class="post-pagination" role="navigation">
+  {% if page.previous %}
+    <a href="{{ page.previous.url | relative_url }}" class="post-pagination__prev">← {{ page.previous.title }}</a>
+  {% endif %}
+  {% if page.next %}
+    <a href="{{ page.next.url | relative_url }}" class="post-pagination__next">{{ page.next.title }} →</a>
+  {% endif %}
+</nav>

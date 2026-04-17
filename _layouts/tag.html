@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include masthead.html %}
+    <main id="main" class="page">
+      <header class="page__header">
+        <h1 class="page__title">Tag: {{ page.title }}</h1>
+      </header>
+      <div class="page__content">
+        {{ content }}
+      </div>
+      {% include paginator.html %}
+    </main>
+    {% include footer/default.html %}
+    {% include scripts.html %}
+  </body>
+</html>

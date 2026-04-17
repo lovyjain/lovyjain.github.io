@@ -1,0 +1,8 @@
+<section class="posts-category">
+  <h2>{{ page.title }}</h2>
+  <ul>
+    {% for post in paginator.posts %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</section>

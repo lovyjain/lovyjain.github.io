@@ -1,13 +1,10 @@
 source "https://rubygems.org"
 
-# Use the same dependency set as GitHub Pages in CI/production.
-gem "github-pages", group: :jekyll_plugins
+# Use minimal-mistakes-jekyll which bundles everything
+gem "minimal-mistakes-jekyll", "~> 4.24.0"
 
-# Required by Minimal Mistakes when loaded via remote_theme.
-gem "jekyll-include-cache", group: :jekyll_plugins
-
-gem "webrick", "~> 1.8"
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+# Required for Jekyll
+gem "webrick", "~> 1.7"
 
 # bundle install
 # bundle exec jekyll serve

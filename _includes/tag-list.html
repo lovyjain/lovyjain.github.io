@@ -1,0 +1,5 @@
+<ul class="tag-list">
+  {% for tag in site.tags %}
+    <li><a href="{{ '/tags/' | append: tag[0] | relative_url }}">{{ tag[0] }}</a></li>
+  {% endfor %}
+</ul>

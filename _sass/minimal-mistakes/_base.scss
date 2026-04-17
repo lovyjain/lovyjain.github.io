@@ -9,16 +9,8 @@
 .page {
   @extend .container;
   clear: both;
-
-  @include breakpoint($large) {
-    float: left;
-    width: calc(100% - #{$sidebar-width});
-    padding-right: $gutter;
-  }
-
-  @include breakpoint($x-large) {
-    width: calc(100% - #{$sidebar-width-wide});
-  }
+  float: left;
+  width: 100%;
 
   .page__inner-wrap {
     float: left;

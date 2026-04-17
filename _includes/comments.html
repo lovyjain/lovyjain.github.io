@@ -1,0 +1,10 @@
+<section class="comments">
+  <h2>Comments</h2>
+  {% if page.comments %}
+    {% for comment in page.comments %}
+      {% include comment.html comment=comment %}
+    {% endfor %}
+  {% else %}
+    <p>No comments yet.</p>
+  {% endif %}
+</section>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    {% include masthead.html %}
+    <main id="main" class="page">
+      <header class="page__header">
+        <h1 class="page__title">Categories</h1>
+      </header>
+      <div class="page__content">
+        <ul class="category-list">
+          {% for category in site.categories %}
+            <li><a href="{{ '/categories/' | append: category[0] | relative_url }}">{{ category[0] }} ({{ category[1].size }})</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </main>
+    {% include footer/default.html %}
+    {% include scripts.html %}
+  </body>
+</html>

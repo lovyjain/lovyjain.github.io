@@ -1,5 +1,4 @@
 ---
-layout: default
 ---
 
 <div class="c-archive">
@@ -14,6 +13,9 @@ layout: default
   {% endunless %}
 
   <div class="page__container">
+    {% if page.author_profile %}
+      {% include author-profile.html %}
+    {% endif %}
     {{ content }}
   </div>
 </div>
