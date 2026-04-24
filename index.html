@@ -125,14 +125,49 @@ layout: none
       margin-bottom: 36px;
     }
 
-    .hero-image {
-      width: 140px;
-      height: 140px;
+    .hero-avatar {
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      margin-bottom: 28px;
+      position: relative;
+      display: block;
+    }
+
+    .hero-avatar img {
+      width: 100%;
+      height: 100%;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid var(--accent);
-      margin-bottom: 32px;
       box-shadow: 0 4px 20px rgba(29, 78, 216, 0.12);
+      display: block;
+    }
+
+    .hero-avatar img[data-error],
+    .hero-avatar img:not([src]),
+    .hero-avatar-fallback {
+      display: none;
+    }
+
+    .hero-avatar img.hidden {
+      display: none;
+    }
+
+    .hero-avatar-fallback {
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      background: var(--accent-bg);
+      border: 3px solid var(--accent);
+      box-shadow: 0 4px 20px rgba(29, 78, 216, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.02em;
     }
 
     .hero-actions {
@@ -496,7 +531,14 @@ layout: none
 <!-- ── Hero ── -->
 <div class="hero">
   <div class="wrap">
-    <img src="/assets/images/profile.jpg" alt="Lovy Jain" class="hero-image">
+    <div class="hero-avatar">
+      <img
+        src="/assets/images/profile.jpg"
+        alt="Lovy Jain"
+        onerror="this.classList.add('hidden');this.nextElementSibling.style.display='flex';"
+      >
+      <div class="hero-avatar-fallback" style="display:none;">LJ</div>
+    </div>
     <span class="hero-label">Technical Architect · AI & Enterprise Solutions</span>
     <h1>Hi, I'm Lovy Jain.</h1>
     <p class="hero-sub">
