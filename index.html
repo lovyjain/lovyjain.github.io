@@ -22,7 +22,7 @@ layout: none
 
     :root {
       --bg: #ffffff;
-      --surface: #f9fafb;
+      --surface: #fafafa;
       --border: #e5e7eb;
       --text: #0f172a;
       --text-secondary: #475569;
@@ -37,7 +37,7 @@ layout: none
 
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 100%);
+      background: #ffffff;
       color: var(--text);
       line-height: 1.6;
       font-size: 16px;
@@ -45,7 +45,6 @@ layout: none
       min-height: 100vh;
     }
 
-    /* ── Nav ── */
     nav {
       position: sticky;
       top: 0;
@@ -113,16 +112,14 @@ layout: none
       width: 100%;
     }
 
-    /* ── Layout ── */
     .wrap {
       max-width: var(--max-w);
       margin: 0 auto;
       padding: 0 28px;
     }
 
-    /* ── Hero ── */
     .hero {
-      padding: 100px 0 80px;
+      padding: 80px 0 60px;
       position: relative;
       overflow: hidden;
     }
@@ -134,7 +131,7 @@ layout: none
       right: -20%;
       width: 500px;
       height: 500px;
-      background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
       border-radius: 50%;
       pointer-events: none;
     }
@@ -149,35 +146,55 @@ layout: none
     }
 
     .hero-text h1 {
-      font-size: 3.5rem;
+      font-size: 3rem;
       font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      margin-bottom: 20px;
-      background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      color: var(--text);
     }
 
-    .hero-label {
-      display: inline-block;
-      font-size: 0.875rem;
+    .hero-title {
+      font-size: 1rem;
       font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 16px;
-      padding: 6px 12px;
-      background: var(--accent-light);
-      border-radius: 6px;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 28px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .hero-stats span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-stats::before, .hero-stats span::after {
+      content: '·';
+      color: var(--text-secondary);
+    }
+
+    .hero-stats::before {
+      margin-right: -12px;
+    }
+
+    .hero-stats span:last-child::after {
+      display: none;
     }
 
     .hero-sub {
-      font-size: 1.125rem;
+      font-size: 1.0625rem;
       color: var(--text-secondary);
       line-height: 1.8;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
 
     .hero-actions {
@@ -205,7 +222,7 @@ layout: none
       inset: -20px;
       background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
       border-radius: 30px;
-      opacity: 0.1;
+      opacity: 0.08;
       animation: float 6s ease-in-out infinite;
     }
 
@@ -216,7 +233,7 @@ layout: none
       border-radius: 24px;
       object-fit: cover;
       border: 4px solid var(--bg);
-      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
+      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
     }
 
     @keyframes float {
@@ -260,7 +277,6 @@ layout: none
       transform: translateY(-2px);
     }
 
-    /* ── Section ── */
     .section {
       padding: 100px 0;
       border-top: 1px solid var(--border);
@@ -268,7 +284,7 @@ layout: none
     }
 
     .section:nth-child(even) {
-      background: linear-gradient(135deg, var(--surface) 0%, var(--bg) 100%);
+      background: var(--surface);
     }
 
     .section-label {
@@ -283,12 +299,11 @@ layout: none
     .section h2 {
       font-size: 2.5rem;
       font-weight: 800;
-      margin-bottom: 60px;
+      margin-bottom: 56px;
       color: var(--text);
       letter-spacing: -0.02em;
     }
 
-    /* ── Achievements ── */
     .ach-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -335,106 +350,6 @@ layout: none
       margin-bottom: 12px;
     }
 
-    /* ── Experience ── */
-    .exp-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      position: relative;
-    }
-
-    .exp-list::before {
-      content: '';
-      position: absolute;
-      left: 70px;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: linear-gradient(180deg, var(--accent) 0%, transparent 100%);
-    }
-
-    .exp-row {
-      display: grid;
-      grid-template-columns: 140px 1fr;
-      gap: 40px;
-      padding: 40px 0;
-      position: relative;
-      padding-left: 0;
-    }
-
-    .exp-dot {
-      position: absolute;
-      left: 37px;
-      top: 48px;
-      width: 16px;
-      height: 16px;
-      background: var(--accent);
-      border: 4px solid var(--bg);
-      border-radius: 50%;
-      box-shadow: 0 0 0 8px var(--accent-light);
-    }
-
-    .exp-period {
-      font-size: 0.875rem;
-      color: var(--accent);
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .exp-body {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 28px;
-      transition: all 0.3s ease;
-    }
-
-    .exp-body:hover {
-      border-color: var(--accent);
-      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.08);
-    }
-
-    .exp-body h3 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-      color: var(--text);
-    }
-
-    .exp-company {
-      font-size: 0.9375rem;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-
-    .exp-meta {
-      font-size: 0.8125rem;
-      color: var(--text-secondary);
-      margin-bottom: 16px;
-    }
-
-    .exp-desc {
-      font-size: 0.9375rem;
-      color: var(--text-secondary);
-      line-height: 1.8;
-      margin-bottom: 16px;
-    }
-
-    .exp-bullets {
-      font-size: 0.9375rem;
-      color: var(--text-secondary);
-      margin: 16px 0;
-      padding-left: 20px;
-      line-height: 1.8;
-    }
-
-    .exp-bullets li {
-      margin-bottom: 8px;
-    }
-
-    /* ── Tags ── */
     .tags {
       display: flex;
       flex-wrap: wrap;
@@ -452,7 +367,6 @@ layout: none
       border: 1px solid rgba(37, 99, 235, 0.2);
     }
 
-    /* ── Stack ── */
     .stack-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -497,7 +411,6 @@ layout: none
       line-height: 1.8;
     }
 
-    /* ── Projects ── */
     .projects-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -558,18 +471,17 @@ layout: none
       flex: 1;
     }
 
-    /* ── Certs ── */
     .cert-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
     }
 
     .cert-item {
       background: var(--bg);
       border: 1.5px solid var(--border);
       border-radius: 12px;
-      padding: 20px;
+      padding: 24px;
       transition: all 0.3s ease;
       border-left: 4px solid var(--accent);
     }
@@ -583,17 +495,16 @@ layout: none
       color: var(--accent);
       display: block;
       font-weight: 700;
-      font-size: 1rem;
-      margin-bottom: 4px;
+      font-size: 1.125rem;
+      margin-bottom: 8px;
     }
 
     .cert-item span {
-      font-size: 0.875rem;
+      font-size: 0.9375rem;
       color: var(--text-secondary);
       line-height: 1.5;
     }
 
-    /* ── Contact ── */
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -651,11 +562,10 @@ layout: none
       color: var(--accent);
     }
 
-    /* ── Footer ── */
     footer {
       border-top: 1px solid var(--border);
       padding: 48px 0;
-      background: linear-gradient(135deg, var(--surface) 0%, var(--bg) 100%);
+      background: var(--surface);
     }
 
     footer .inner {
@@ -694,7 +604,6 @@ layout: none
       transform: translateY(-2px);
     }
 
-    /* ── Responsive ── */
     @media (max-width: 768px) {
       .hero {
         padding: 60px 0 40px;
@@ -706,7 +615,7 @@ layout: none
       }
 
       .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
       }
 
       .hero-image-wrapper {
@@ -714,21 +623,13 @@ layout: none
         height: 240px;
       }
 
+      .hero-stats {
+        flex-direction: column;
+        gap: 12px;
+      }
+
       .section h2 {
         font-size: 1.75rem;
-      }
-
-      .exp-list::before {
-        left: 55px;
-      }
-
-      .exp-dot {
-        left: 23px;
-      }
-
-      .exp-row {
-        grid-template-columns: 110px 1fr;
-        gap: 20px;
       }
 
       .contact-grid {
@@ -747,38 +648,44 @@ layout: none
       .nav-links {
         gap: 20px;
       }
+
+      .cert-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
     }
   </style>
 </head>
 <body>
 
-<!-- ── Nav ── -->
 <nav>
   <div class="inner">
     <a href="#" class="nav-name">Lovy Jain</a>
     <ul class="nav-links">
-      <li><a href="#experience">Experience</a></li>
       <li><a href="#stack">Stack</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="/assets/resume/Lovy_Jain_Resume.pdf" download>Resume ↓</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- ── Hero ── -->
 <section class="hero">
   <div class="wrap">
     <div class="hero-content">
       <div class="hero-text">
-        <span class="hero-label">Technical Architect</span>
-        <h1>Building Enterprise AI Systems</h1>
+        <h1>Lovy Jain</h1>
+        <p class="hero-title">Technical Architect · AI & Enterprise Solutions</p>
+        <div class="hero-stats">
+          <span>13+ Years</span>
+          <span>7 Certifications</span>
+          <span>30+ Technologies</span>
+        </div>
         <p class="hero-sub">
-          13+ years designing and delivering enterprise-scale, AI-integrated solutions on Microsoft platforms
-          for Fortune 500 clients. Proven track record architecting Dynamics 365, Azure, Copilot Studio, and
-          Power Platform solutions across facility management, energy, pharma, healthcare, and financial services.
+          Designing and delivering enterprise-scale, AI-integrated solutions on Microsoft platforms for Fortune 500 clients. Expertise in Dynamics 365, Azure, Copilot Studio, and Power Platform across facility management, energy, pharma, healthcare, and financial services.
         </p>
         <div class="hero-actions">
-          <a href="#experience" class="btn btn-primary">View Experience</a>
+          <a href="/assets/resume/Lovy_Jain_Resume.pdf" class="btn btn-primary" download>Download Resume</a>
           <a href="https://linkedin.com/in/jainlovy" class="btn btn-secondary" target="_blank" rel="noopener">LinkedIn ↗</a>
         </div>
       </div>
@@ -796,7 +703,6 @@ layout: none
   </div>
 </section>
 
-<!-- ── Signature Achievements ── -->
 <section class="section">
   <div class="wrap">
     <span class="section-label">Signature Achievements</span>
@@ -818,141 +724,6 @@ layout: none
   </div>
 </section>
 
-<!-- ── Experience ── -->
-<section class="section" id="experience">
-  <div class="wrap">
-    <span class="section-label">Professional Journey</span>
-    <h2>13+ Years of Impact</h2>
-    <div class="exp-list">
-
-      <div class="exp-row">
-        <div class="exp-dot"></div>
-        <div class="exp-period">Oct 2022<br>Present</div>
-        <div class="exp-body">
-          <h3>Technical Architect</h3>
-          <div class="exp-company">Nagarro</div>
-          <div class="exp-meta">Clients: Sodexo, BHF · Team: 10+</div>
-          <p class="exp-desc">Leading technical architecture for mobile-first facility management application. MS Dynamics 365 CRM as central hub, .NET backend APIs, Azure Functions fully automated via CI/CD.</p>
-          <ul class="exp-bullets">
-            <li>Design & deliver agentic AI solutions using Azure OpenAI and Copilot Studio for customer workflows</li>
-            <li>Architected end-to-end CRM-led engagement platform with Dynamics 365, Azure Functions, Service Bus for 1000+ global facilities</li>
-            <li>Established Power Platform Center of Excellence with reusable accelerators reducing build time by 30%</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Copilot Studio</span>
-            <span class="tag">Azure OpenAI</span>
-            <span class="tag">Dynamics 365</span>
-            <span class="tag">React</span>
-            <span class="tag">Azure Functions</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="exp-row">
-        <div class="exp-dot"></div>
-        <div class="exp-period">Sep 2020<br>Oct 2022</div>
-        <div class="exp-body">
-          <h3>Associate Technical Architect</h3>
-          <div class="exp-company">HCL Technologies</div>
-          <div class="exp-meta">Client: Chevron (Oil & Gas) · Team: 10</div>
-          <p class="exp-desc">Led enterprise intranet portal architecture for global energy client with Azure AD-secured multi-app platform and Microsoft Viva adoption.</p>
-          <ul class="exp-bullets">
-            <li>Led joint architecture workshops & requirement-gathering with Chevron stakeholders</li>
-            <li>Led SharePoint 2016 → SharePoint Online migration with SPFx, PnP provisioning</li>
-            <li>Architected tenant-level provisioning using Azure Functions & Site Scripts for governed SharePoint deployments</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">SharePoint Online</span>
-            <span class="tag">SPFx</span>
-            <span class="tag">Azure Functions</span>
-            <span class="tag">Viva Topics</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="exp-row">
-        <div class="exp-dot"></div>
-        <div class="exp-period">Jul 2019<br>Sep 2020</div>
-        <div class="exp-body">
-          <h3>Technical Analyst</h3>
-          <div class="exp-company">NIIT Technologies (Coforge)</div>
-          <div class="exp-meta">Client: ExpressJet Airways (US) · Team: 6</div>
-          <p class="exp-desc">M365-integrated intranet portal leveraging SharePoint Online and React with OAuth-based token authorization.</p>
-          <ul class="exp-bullets">
-            <li>Designed & delivered M365 intranet with React, SPFx, OAuth-secured APIs with data visualization widgets</li>
-            <li>Built performance dashboards, custom menus, and personalized favorites using SPFx extensions</li>
-            <li>Led client requirement gathering and authored technical design documents</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">React</span>
-            <span class="tag">SPFx</span>
-            <span class="tag">OAuth</span>
-            <span class="tag">Power Automate</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="exp-row">
-        <div class="exp-dot"></div>
-        <div class="exp-period">Apr 2017<br>Jul 2019</div>
-        <div class="exp-body">
-          <h3>Developer & Offshore Coordinator</h3>
-          <div class="exp-company">KPMG</div>
-          <div class="exp-meta">Client: KPMG UK</div>
-          <p class="exp-desc">Intranet portal for KPMG UK to improve access to internal news, communications, and search with mobile-enabled access.</p>
-          <ul class="exp-bullets">
-            <li>Coordinated between onshore UK stakeholders and offshore development teams</li>
-            <li>Led module development, governance framework, and launch planning for mobile-enabled intranet</li>
-            <li>Supported presales & client advisory during bid phases for M365 and Power Platform engagements</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">SharePoint Online</span>
-            <span class="tag">React</span>
-            <span class="tag">Governance</span>
-            <span class="tag">Presales</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="exp-row">
-        <div class="exp-dot"></div>
-        <div class="exp-period">Feb 2016<br>Mar 2017</div>
-        <div class="exp-body">
-          <h3>Developer</h3>
-          <div class="exp-company">Tata Consultancy Services</div>
-          <div class="exp-meta">Client: Eli Lilly (Pharma)</div>
-          <p class="exp-desc">Enterprise SharePoint applications for global pharmaceutical client with InfoPath forms, automated workflows, production support.</p>
-          <div class="tags">
-            <span class="tag">SharePoint</span>
-            <span class="tag">InfoPath</span>
-            <span class="tag">Workflows</span>
-            <span class="tag">Service Now</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="exp-row">
-        <div class="exp-dot"></div>
-        <div class="exp-period">Sep 2013<br>Feb 2016</div>
-        <div class="exp-body">
-          <h3>Developer</h3>
-          <div class="exp-company">Infosys</div>
-          <div class="exp-meta">Client: Fresenius Kabi (Healthcare, Germany)</div>
-          <p class="exp-desc">Globally localised, cross-device responsive SharePoint 2013 portal supporting 40+ country deployments with cross-site publishing architecture.</p>
-          <div class="tags">
-            <span class="tag">SharePoint 2013</span>
-            <span class="tag">Content Search</span>
-            <span class="tag">Master Pages</span>
-            <span class="tag">Responsive Design</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ── Technology Stack ── -->
 <section class="section" id="stack">
   <div class="wrap">
     <span class="section-label">Expertise</span>
@@ -986,7 +757,6 @@ layout: none
   </div>
 </section>
 
-<!-- ── Projects ── -->
 <section class="section" id="projects">
   <div class="wrap">
     <span class="section-label">Featured Work</span>
@@ -1015,8 +785,7 @@ layout: none
   </div>
 </section>
 
-<!-- ── Certifications ── -->
-<section class="section">
+<section class="section" id="certifications">
   <div class="wrap">
     <span class="section-label">Certifications</span>
     <h2>Microsoft & Industry Credentials</h2>
@@ -1053,7 +822,6 @@ layout: none
   </div>
 </section>
 
-<!-- ── Contact ── -->
 <section class="section" id="contact">
   <div class="wrap">
     <span class="section-label">Get In Touch</span>
@@ -1087,7 +855,6 @@ layout: none
   </div>
 </section>
 
-<!-- ── Footer ── -->
 <footer>
   <div class="inner">
     <p class="footer-text">
