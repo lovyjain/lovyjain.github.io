@@ -6,10 +6,10 @@ layout: none
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lovy Jain — Technical Architect & AI Builder</title>
-  <meta name="description" content="Portfolio of Lovy Jain — Technical Architect specializing in enterprise AI, Microsoft Azure, and product engineering. Based in Delhi-NCR, India.">
+  <title>Lovy Jain — Technical Architect • AI & Enterprise Solutions</title>
+  <meta name="description" content="Lovy Jain — Technical Architect with 13+ years designing enterprise-scale AI solutions on Microsoft platforms. Dynamics 365, Azure, Copilot Studio, Power Platform expertise.">
   <meta property="og:title" content="Lovy Jain — Technical Architect & AI Builder">
-  <meta property="og:description" content="I design and build enterprise AI systems at the intersection of Microsoft cloud, intelligent automation, and product engineering.">
+  <meta property="og:description" content="13+ years designing and delivering enterprise AI solutions on Microsoft cloud platforms for Fortune 500 clients.">
   <meta property="og:url" content="https://lovyjain.github.io">
   <link rel="canonical" href="https://lovyjain.github.io">
 
@@ -28,7 +28,7 @@ layout: none
       --muted: #6b7280;
       --accent: #1d4ed8;
       --accent-bg: #eff6ff;
-      --max-w: 860px;
+      --max-w: 920px;
     }
 
     html { scroll-behavior: smooth; }
@@ -87,7 +87,7 @@ layout: none
 
     .nav-links a:hover { color: var(--accent); }
 
-    /* ── Layout helper ── */
+    /* ── Layout ── */
     .wrap {
       max-width: var(--max-w);
       margin: 0 auto;
@@ -118,10 +118,10 @@ layout: none
     }
 
     .hero-sub {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--muted);
-      max-width: 540px;
-      line-height: 1.7;
+      max-width: 620px;
+      line-height: 1.75;
       margin-bottom: 36px;
     }
 
@@ -160,7 +160,7 @@ layout: none
 
     .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
-    /* ── Section base ── */
+    /* ── Section ── */
     .section {
       padding: 72px 0;
       border-top: 1px solid var(--border);
@@ -175,6 +175,27 @@ layout: none
       margin-bottom: 40px;
     }
 
+    /* ── Achievements ── */
+    .ach-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .ach-card {
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      background: var(--surface);
+    }
+
+    .ach-card p {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
     /* ── Experience ── */
     .exp-list {
       display: flex;
@@ -184,7 +205,7 @@ layout: none
 
     .exp-row {
       display: grid;
-      grid-template-columns: 160px 1fr;
+      grid-template-columns: 140px 1fr;
       gap: 20px;
     }
 
@@ -206,21 +227,40 @@ layout: none
       font-size: 0.875rem;
       color: var(--accent);
       font-weight: 500;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
+    }
+
+    .exp-meta {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      margin-bottom: 12px;
     }
 
     .exp-desc {
       font-size: 0.875rem;
       color: var(--muted);
       line-height: 1.75;
+      margin-bottom: 12px;
     }
 
-    /* ── Tag pill ── */
+    .exp-bullets {
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin: 12px 0;
+      padding-left: 18px;
+      line-height: 1.75;
+    }
+
+    .exp-bullets li {
+      margin-bottom: 6px;
+    }
+
+    /* ── Tags ── */
     .tags {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin-top: 14px;
+      margin-top: 12px;
     }
 
     .tag {
@@ -232,10 +272,30 @@ layout: none
       border-radius: 999px;
     }
 
+    /* ── Stack ── */
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .stack-category h4 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .stack-category p {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
     /* ── Projects ── */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
       gap: 20px;
     }
 
@@ -284,6 +344,28 @@ layout: none
       flex: 1;
     }
 
+    /* ── Certs ── */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .cert-item {
+      font-size: 0.875rem;
+      color: var(--muted);
+      padding: 10px;
+      border-radius: 8px;
+      border-left: 3px solid var(--accent);
+      background: var(--surface);
+    }
+
+    .cert-item strong {
+      color: var(--text);
+      display: block;
+      margin-bottom: 2px;
+    }
+
     /* ── Contact ── */
     .contact-grid {
       display: grid;
@@ -293,9 +375,9 @@ layout: none
     }
 
     .contact-intro {
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: var(--muted);
-      line-height: 1.75;
+      line-height: 1.8;
     }
 
     .contact-links {
@@ -375,23 +457,26 @@ layout: none
     .footer-links a:hover { color: var(--accent); }
 
     /* ── Responsive ── */
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       .hero { padding: 60px 0 52px; }
       .exp-row { grid-template-columns: 1fr; gap: 6px; }
       .projects-grid { grid-template-columns: 1fr; }
       .contact-grid { grid-template-columns: 1fr; gap: 36px; }
       .nav-links { gap: 16px; }
+      .stack-grid { grid-template-columns: 1fr; }
+      .ach-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-<!-- ── Navigation ── -->
+<!-- ── Nav ── -->
 <nav>
   <div class="inner">
     <a href="#" class="nav-name">Lovy Jain</a>
     <ul class="nav-links">
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#stack">Stack</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -401,85 +486,203 @@ layout: none
 <!-- ── Hero ── -->
 <div class="hero">
   <div class="wrap">
-    <span class="hero-label">Technical Architect &amp; AI Builder</span>
+    <span class="hero-label">Technical Architect · AI & Enterprise Solutions</span>
     <h1>Hi, I'm Lovy Jain.</h1>
     <p class="hero-sub">
-      I design and build enterprise AI systems — at the intersection of Microsoft cloud,
-      intelligent automation, and product engineering. Based in Delhi-NCR, India.
+      13+ years designing and delivering enterprise-scale, AI-integrated solutions on Microsoft platforms
+      for Fortune 500 clients. Proven track record architecting Dynamics 365, Azure, Copilot Studio, and
+      Power Platform solutions across facility management, energy, pharma, healthcare, and financial services.
     </p>
     <div class="hero-actions">
-      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#experience" class="btn btn-primary">View Experience</a>
       <a href="https://linkedin.com/in/jainlovy" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn ↗</a>
       <a href="mailto:lovyjain18@gmail.com" class="btn btn-ghost">Get in touch</a>
     </div>
   </div>
 </div>
 
+<!-- ── Signature Achievements ── -->
+<section class="section">
+  <div class="wrap">
+    <p class="section-eyebrow">Signature Achievements</p>
+    <div class="ach-grid">
+      <div class="ach-card">
+        <p><strong>Global Service Orchestration at Scale</strong><br>Led architecture of a global, AI-powered customer engagement platform on Dynamics 365, integrating React, Azure Service Bus, Azure OpenAI, and serverless components to drive intelligent service orchestration across 400+ stores.</p>
+      </div>
+      <div class="ach-card">
+        <p><strong>Center of Excellence from Scratch</strong><br>Established a Power Platform COE spanning governance, DLP, ALM, and a reusable accelerator library adopted across four delivery teams reducing subsequent delivery effort by ~30%.</p>
+      </div>
+      <div class="ach-card">
+        <p><strong>Stakeholder Engagement & Presales</strong><br>Led joint architecture workshops for Chevron and KPMG UK, translating ambiguous business needs into decision-grade technical proposals and unlocking project budgets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ── Experience ── -->
 <section class="section" id="experience">
   <div class="wrap">
-    <p class="section-eyebrow">Experience</p>
+    <p class="section-eyebrow">Professional Experience</p>
     <div class="exp-list">
 
       <div class="exp-row">
-        <div class="exp-period">2023 — Present</div>
+        <div class="exp-period">Oct 2022<br>Present</div>
         <div class="exp-body">
           <h3>Technical Architect</h3>
-          <div class="exp-company">Stetig Consulting</div>
-          <p class="exp-desc">
-            Leading enterprise AI adoption for large organisations — architecting Copilot Studio
-            agents, Azure OpenAI integrations, and agentic orchestration pipelines. Responsible
-            for end-to-end solution design across Dynamics 365, Power Platform, and Azure-native
-            services. Driving delivery strategy and pre-sales architecture for key accounts.
-          </p>
+          <div class="exp-company">Nagarro</div>
+          <div class="exp-meta">Clients: Sodexo, BHF · Team: 10+</div>
+          <p class="exp-desc">Leading technical architecture for mobile-first facility management application. MS Dynamics 365 CRM as central hub, .NET backend APIs, Azure Functions fully automated via CI/CD.</p>
+          <ul class="exp-bullets">
+            <li>Design & deliver agentic AI solutions using Azure OpenAI and Copilot Studio for customer workflows</li>
+            <li>Architected end-to-end CRM-led engagement platform with Dynamics 365, Azure Functions, Service Bus for 1000+ global facilities</li>
+            <li>Established Power Platform Center of Excellence with reusable accelerators reducing build time by 30%</li>
+          </ul>
           <div class="tags">
-            <span class="tag">Azure OpenAI</span>
             <span class="tag">Copilot Studio</span>
+            <span class="tag">Azure OpenAI</span>
             <span class="tag">Dynamics 365</span>
-            <span class="tag">Power Platform</span>
+            <span class="tag">React</span>
             <span class="tag">Azure Functions</span>
+            <span class="tag">Cosmos DB</span>
           </div>
         </div>
       </div>
 
       <div class="exp-row">
-        <div class="exp-period">2021 — 2023</div>
+        <div class="exp-period">Sep 2020<br>Oct 2022</div>
         <div class="exp-body">
-          <h3>Senior Consultant — Microsoft Practice</h3>
-          <div class="exp-company">Avanade</div>
-          <p class="exp-desc">
-            Delivered end-to-end Dynamics 365 and Power Platform solutions for enterprise clients
-            across financial services and professional services. Led cross-functional squads through
-            full delivery cycles — from discovery workshops to go-live and hypercare. Specialised
-            in Dataverse architecture, custom connectors, and Azure integration services.
-          </p>
+          <h3>Associate Technical Architect</h3>
+          <div class="exp-company">HCL Technologies</div>
+          <div class="exp-meta">Client: Chevron (Oil & Gas) · Team: 10</div>
+          <p class="exp-desc">Led enterprise intranet portal architecture for global energy client with Azure AD-secured multi-app platform and Microsoft Viva adoption.</p>
+          <ul class="exp-bullets">
+            <li>Led joint architecture workshops & requirement-gathering with Chevron stakeholders</li>
+            <li>Led SharePoint 2016 → SharePoint Online migration with SPFx, PnP provisioning</li>
+            <li>Architected tenant-level provisioning using Azure Functions & Site Scripts for governed SharePoint deployments</li>
+          </ul>
           <div class="tags">
-            <span class="tag">Dynamics 365 CRM</span>
-            <span class="tag">Dataverse</span>
+            <span class="tag">SharePoint Online</span>
+            <span class="tag">SPFx</span>
+            <span class="tag">Azure Functions</span>
+            <span class="tag">Viva Topics</span>
+            <span class="tag">Azure CLI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-row">
+        <div class="exp-period">Jul 2019<br>Sep 2020</div>
+        <div class="exp-body">
+          <h3>Technical Analyst</h3>
+          <div class="exp-company">NIIT Technologies (Coforge)</div>
+          <div class="exp-meta">Client: ExpressJet Airways (US) · Team: 6</div>
+          <p class="exp-desc">M365-integrated intranet portal leveraging SharePoint Online and React with OAuth-based token authorization.</p>
+          <ul class="exp-bullets">
+            <li>Designed & delivered M365 intranet with React, SPFx, OAuth-secured APIs with data visualization widgets</li>
+            <li>Built performance dashboards, custom menus, and personalized favorites using SPFx extensions</li>
+            <li>Led client requirement gathering and authored technical design documents</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">SPFx</span>
+            <span class="tag">OAuth</span>
             <span class="tag">Power Automate</span>
-            <span class="tag">Azure Logic Apps</span>
+            <span class="tag">Managed Identity</span>
           </div>
         </div>
       </div>
 
       <div class="exp-row">
-        <div class="exp-period">2018 — 2021</div>
+        <div class="exp-period">Apr 2017<br>Jul 2019</div>
         <div class="exp-body">
-          <h3>Developer — Microsoft Dynamics</h3>
-          <div class="exp-company">Infosys</div>
-          <p class="exp-desc">
-            Built and customised CRM solutions on Microsoft Dynamics 365 for clients in
-            manufacturing, retail, and services. Developed plugins, workflows, and
-            Azure-integrated data pipelines. Mentored junior developers and contributed to
-            internal practice knowledge base.
-          </p>
+          <h3>Developer & Offshore Coordinator</h3>
+          <div class="exp-company">KPMG</div>
+          <div class="exp-meta">Client: KPMG UK</div>
+          <p class="exp-desc">Intranet portal for KPMG UK to improve access to internal news, communications, and search with mobile-enabled access.</p>
+          <ul class="exp-bullets">
+            <li>Coordinated between onshore UK stakeholders and offshore development teams</li>
+            <li>Led module development, governance framework, and launch planning for mobile-enabled intranet</li>
+            <li>Supported presales & client advisory during bid phases for M365 and Power Platform engagements</li>
+          </ul>
           <div class="tags">
-            <span class="tag">Dynamics CRM</span>
-            <span class="tag">C# Plugins</span>
-            <span class="tag">Azure Service Bus</span>
-            <span class="tag">SQL Server</span>
+            <span class="tag">SharePoint Online</span>
+            <span class="tag">React</span>
+            <span class="tag">Governance</span>
+            <span class="tag">Presales</span>
           </div>
         </div>
+      </div>
+
+      <div class="exp-row">
+        <div class="exp-period">Feb 2016<br>Mar 2017</div>
+        <div class="exp-body">
+          <h3>Developer</h3>
+          <div class="exp-company">Tata Consultancy Services</div>
+          <div class="exp-meta">Client: Eli Lilly (Pharma)</div>
+          <p class="exp-desc">Enterprise SharePoint applications for global pharmaceutical client with InfoPath forms, automated workflows, production support.</p>
+          <div class="tags">
+            <span class="tag">SharePoint</span>
+            <span class="tag">InfoPath</span>
+            <span class="tag">Workflows</span>
+            <span class="tag">Service Now</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-row">
+        <div class="exp-period">Sep 2013<br>Feb 2016</div>
+        <div class="exp-body">
+          <h3>Developer</h3>
+          <div class="exp-company">Infosys</div>
+          <div class="exp-meta">Client: Fresenius Kabi (Healthcare, Germany)</div>
+          <p class="exp-desc">Globally localised, cross-device responsive SharePoint 2013 portal supporting 40+ country deployments with cross-site publishing architecture.</p>
+          <div class="tags">
+            <span class="tag">SharePoint 2013</span>
+            <span class="tag">Content Search</span>
+            <span class="tag">Master Pages</span>
+            <span class="tag">Responsive Design</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Technology Stack ── -->
+<section class="section" id="stack">
+  <div class="wrap">
+    <p class="section-eyebrow">Technology Stack</p>
+    <div class="stack-grid">
+
+      <div class="stack-category">
+        <h4>AI & GenAI</h4>
+        <p>Copilot Studio · Azure AI Foundry · GitHub Copilot · Agentic AI · Prompt Engineering · RAG</p>
+      </div>
+
+      <div class="stack-category">
+        <h4>CRM & ERP</h4>
+        <p>Dynamics 365 CE · Dataverse · FetchXML · Power Apps · Power Automate · Custom Connectors · PCF Controls · Power BI</p>
+      </div>
+
+      <div class="stack-category">
+        <h4>Azure Platform</h4>
+        <p>Functions · App Service · APIM · Service Bus · Cosmos DB · Key Vault · Redis · Databricks · Data Factory · Application Insights</p>
+      </div>
+
+      <div class="stack-category">
+        <h4>Integration & APIs</h4>
+        <p>.NET Core Web API · REST · MS Graph · OAuth / MSAL · Managed Identity · Webhooks · CIAM</p>
+      </div>
+
+      <div class="stack-category">
+        <h4>Engineering Practice</h4>
+        <p>Agile / Scrum · HLD / LLD · CI/CD (GitHub, GitLab, Azure DevOps) · SonarQube · Incident Response</p>
+      </div>
+
+      <div class="stack-category">
+        <h4>Frontend</h4>
+        <p>React · Ionic React · TypeScript · SPFx · Fluent UI · Tailwind CSS · i18n</p>
       </div>
 
     </div>
@@ -489,7 +692,7 @@ layout: none
 <!-- ── Projects ── -->
 <section class="section" id="projects">
   <div class="wrap">
-    <p class="section-eyebrow">Projects</p>
+    <p class="section-eyebrow">Key Projects</p>
     <div class="projects-grid">
 
       <div class="card">
@@ -498,10 +701,9 @@ layout: none
           <a href="https://jainkwiz.com" class="card-link" target="_blank" rel="noopener">Live ↗</a>
         </div>
         <p class="card-desc">
-          A gamified learning platform making Jain philosophy accessible and engaging for the
-          global Jain community. Features real-time multiplayer tournaments via Azure SignalR,
-          spaced repetition (SM-2), an AI chatbot grounded on a curated Jain knowledge base,
-          and a progressive web app for offline-first mobile use.
+          Gamified learning platform making Jain philosophy accessible and engaging for the global Jain community.
+          Features real-time multiplayer tournaments via Azure SignalR, spaced repetition (SM-2), AI chatbot grounded on curated knowledge base,
+          and progressive web app for offline-first mobile use.
         </p>
         <div class="tags">
           <span class="tag">React + Ionic</span>
@@ -513,41 +715,43 @@ layout: none
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-header">
-          <h3>Enterprise Copilot Framework</h3>
-        </div>
-        <p class="card-desc">
-          An internal delivery accelerator for deploying enterprise-grade AI copilots on Microsoft
-          platforms. Covers authentication patterns, governance guardrails, observability, and
-          reusable integration components for Copilot Studio and Azure OpenAI deployments —
-          reducing solution build time by weeks per engagement.
-        </p>
-        <div class="tags">
-          <span class="tag">Copilot Studio</span>
-          <span class="tag">Azure OpenAI</span>
-          <span class="tag">Power Platform</span>
-          <span class="tag">Azure Monitor</span>
-        </div>
-      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="card">
-        <div class="card-header">
-          <h3>Agentic Orchestration PoC</h3>
-        </div>
-        <p class="card-desc">
-          A proof-of-concept for multi-agent task orchestration on Azure — demonstrating how
-          autonomous AI agents can coordinate across Dynamics 365, SharePoint, and external APIs
-          to complete complex, multi-step business workflows with minimal human intervention.
-        </p>
-        <div class="tags">
-          <span class="tag">Azure AI Foundry</span>
-          <span class="tag">Semantic Kernel</span>
-          <span class="tag">Dynamics 365</span>
-          <span class="tag">Azure Functions</span>
-        </div>
+<!-- ── Certifications ── -->
+<section class="section">
+  <div class="wrap">
+    <p class="section-eyebrow">Certifications</p>
+    <div class="cert-grid">
+      <div class="cert-item">
+        <strong>PL-600</strong>
+        Power Platform Solution Architect Expert
       </div>
-
+      <div class="cert-item">
+        <strong>PL-400</strong>
+        Power Platform Developer
+      </div>
+      <div class="cert-item">
+        <strong>AZ-304</strong>
+        Azure Solutions Architect Expert
+      </div>
+      <div class="cert-item">
+        <strong>AZ-303</strong>
+        Azure Architect Technologies
+      </div>
+      <div class="cert-item">
+        <strong>MS-600</strong>
+        Microsoft 365 Developer
+      </div>
+      <div class="cert-item">
+        <strong>MCT</strong>
+        Microsoft Certified Trainer
+      </div>
+      <div class="cert-item">
+        <strong>CSM</strong>
+        Certified Scrum Master
+      </div>
     </div>
   </div>
 </section>
@@ -559,15 +763,18 @@ layout: none
     <div class="contact-grid">
       <div>
         <p class="contact-intro">
-          Open to conversations on enterprise AI architecture, Microsoft platform strategy,
-          and building meaningful products. I'm based in Delhi-NCR, India — and happy to
-          connect remotely anywhere.
+          Open to conversations on enterprise AI architecture, Microsoft platform strategy, Center of Excellence
+          building, and technical leadership. Based in Delhi-NCR, Noida — happy to connect remotely worldwide.
         </p>
       </div>
       <div class="contact-links">
         <a href="mailto:lovyjain18@gmail.com" class="c-link">
           <i class="c-icon">✉</i>
           lovyjain18@gmail.com
+        </a>
+        <a href="tel:+919711245951" class="c-link">
+          <i class="c-icon">☎</i>
+          +91-9711245951
         </a>
         <a href="https://linkedin.com/in/jainlovy" class="c-link" target="_blank" rel="noopener">
           <i class="c-icon">in</i>
@@ -577,10 +784,6 @@ layout: none
           <i class="c-icon">gh</i>
           github.com/lovyjain
         </a>
-        <a href="https://jainkwiz.com" class="c-link" target="_blank" rel="noopener">
-          <i class="c-icon">↗</i>
-          jainkwiz.com
-        </a>
       </div>
     </div>
   </div>
@@ -589,7 +792,7 @@ layout: none
 <!-- ── Footer ── -->
 <footer>
   <div class="inner">
-    <p class="footer-text">© 2026 Lovy Jain · Delhi-NCR, India</p>
+    <p class="footer-text">© 2026 Lovy Jain · Delhi-NCR, Noida · India</p>
     <ul class="footer-links">
       <li><a href="https://linkedin.com/in/jainlovy" target="_blank" rel="noopener">LinkedIn</a></li>
       <li><a href="https://github.com/lovyjain" target="_blank" rel="noopener">GitHub</a></li>
