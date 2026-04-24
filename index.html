@@ -413,8 +413,12 @@ layout: none
 
     .projects-grid {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
       gap: 32px;
+    }
+
+    .card.card-featured {
+      grid-column: 1 / -1;
     }
 
     .card {
@@ -652,6 +656,14 @@ layout: none
       .cert-grid {
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card.card-featured {
+        grid-column: auto;
+      }
     }
   </style>
 </head>
@@ -762,7 +774,7 @@ layout: none
     <span class="section-label">Featured Work</span>
     <h2>Notable Projects</h2>
     <div class="projects-grid">
-      <div class="card">
+      <div class="card card-featured">
         <div class="card-header">
           <h3>JainKwiz</h3>
           <a href="https://jainkwiz.com" class="card-link" target="_blank" rel="noopener">View Live ↗</a>
@@ -779,6 +791,130 @@ layout: none
           <span class="tag">Cosmos DB</span>
           <span class="tag">Azure AI Search</span>
           <span class="tag">PWA</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Agentic Facility Management Platform</h3>
+        </div>
+        <p class="card-desc">
+          Mobile-first, cross-platform facility management application for a major UK healthcare charity and a global facilities management leader,
+          enabling 1,000+ facilities to raise, track, and manage service requests across housekeeping, maintenance, IT, and security domains.
+          Designed agentic AI workflows using Azure OpenAI and Copilot Studio, and architected a modular Lego-style integration layer with Dynamics 365,
+          Azure Service Bus, and Azure Functions. Established the Power Platform Centre of Excellence, cutting solution build time by ~30%.
+        </p>
+        <div class="tags">
+          <span class="tag">Dynamics 365</span>
+          <span class="tag">Azure OpenAI</span>
+          <span class="tag">Copilot Studio</span>
+          <span class="tag">Azure Functions</span>
+          <span class="tag">Azure Service Bus</span>
+          <span class="tag">React</span>
+          <span class="tag">Power Platform</span>
+          <span class="tag">Cosmos DB</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Enterprise Intranet — Global Oil &amp; Gas Corporation</h3>
+        </div>
+        <p class="card-desc">
+          Azure AD-secured multi-app enterprise intranet for a global energy corporation, incorporating Microsoft Viva Topics adoption
+          and tenant-level governed SharePoint provisioning across global business units. Led SharePoint 2016 to SharePoint Online migration,
+          implemented CSOM authentication via PnP.Framework, and automated Azure resource provisioning using Azure CLI and PowerShell.
+          Delivered enterprise information governance with sensitivity labels and multi-stage disposition workflows.
+        </p>
+        <div class="tags">
+          <span class="tag">SharePoint Online</span>
+          <span class="tag">SPFx</span>
+          <span class="tag">Microsoft Viva</span>
+          <span class="tag">Azure Functions</span>
+          <span class="tag">Site Scripts</span>
+          <span class="tag">Azure CLI</span>
+          <span class="tag">PowerShell</span>
+          <span class="tag">PnP Framework</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Airline Operations Intranet — Major US Regional Airline</h3>
+        </div>
+        <p class="card-desc">
+          M365-integrated intranet portal for a major US regional airline, featuring data visualisation dashboards
+          for operational teams including performance metrics, graph charts, and personalised favourites widgets.
+          Built with React and SPFx, secured with OAuth-based token authorisation and Azure Managed Identity.
+          Delivered Power Automate workflows for business process automation and led client requirement gathering
+          and technical design documentation.
+        </p>
+        <div class="tags">
+          <span class="tag">React</span>
+          <span class="tag">SPFx</span>
+          <span class="tag">OAuth</span>
+          <span class="tag">Power Automate</span>
+          <span class="tag">Azure Managed Identity</span>
+          <span class="tag">Microsoft Graph</span>
+          <span class="tag">SharePoint Online</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Global Intranet — Big Four Professional Services Firm</h3>
+        </div>
+        <p class="card-desc">
+          Mobile-enabled intranet portal for a Big Four global professional services firm, improving access to internal news,
+          communications, and search across service lines and performance groups. Led module development, governance framework
+          creation, and launch planning for the global workforce. Created custom governance processes to control portal customisations
+          and supported presales RFP responses and technical sizing for multi-workload M365 and Power Platform engagements.
+        </p>
+        <div class="tags">
+          <span class="tag">SharePoint</span>
+          <span class="tag">M365</span>
+          <span class="tag">Power Platform</span>
+          <span class="tag">Governance Framework</span>
+          <span class="tag">SPFx</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Pharma Compliance Portal — Global Pharmaceutical Leader</h3>
+        </div>
+        <p class="card-desc">
+          Enterprise SharePoint applications and automated compliance workflows for a Fortune 500 global pharmaceutical corporation.
+          Delivered InfoPath forms, SharePoint Designer workflows, and timer jobs for business process automation,
+          with SLA-bound production support managed through ServiceNow. Maintained high-availability enterprise systems
+          across the client's global operations.
+        </p>
+        <div class="tags">
+          <span class="tag">SharePoint</span>
+          <span class="tag">InfoPath</span>
+          <span class="tag">SharePoint Designer Workflows</span>
+          <span class="tag">ServiceNow</span>
+          <span class="tag">Timer Jobs</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Multilingual Global Portal — Major European Healthcare Group</h3>
+        </div>
+        <p class="card-desc">
+          Globally localised, cross-device responsive SharePoint 2013 intranet portal for a leading European healthcare group,
+          supporting 40+ country deployments. Designed with a cross-site publishing architecture using Content Search Web Parts
+          and display template customisations, with tailored master pages and page layouts per locale.
+          Delivered full internationalisation across a distributed rollout spanning healthcare operations in Europe and beyond.
+        </p>
+        <div class="tags">
+          <span class="tag">SharePoint 2013</span>
+          <span class="tag">Cross-site Publishing</span>
+          <span class="tag">Content Search Web Part</span>
+          <span class="tag">Display Templates</span>
+          <span class="tag">Master Pages</span>
+          <span class="tag">i18n</span>
         </div>
       </div>
     </div>
