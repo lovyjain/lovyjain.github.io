@@ -1,16 +1,8 @@
 # main links
 main:
-  - title: "Posts"
-    url: /year-archive/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
+  - title: "Home"
+    url: /
   - title: "About"
     url: /about/
   - title: "Contact"
     url: /contact/
-  - title: "Example"
-    url: /example/
-  - title: "Search"
-    url: /search/

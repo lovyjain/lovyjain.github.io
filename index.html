@@ -1,6 +1,602 @@
 ---
-layout: home
-author_profile: true
-title: "Lovy Jain"
-excerpt: "Thoughts on AI architecture, Microsoft cloud, product building, and practical engineering leadership."
+layout: none
 ---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lovy Jain — Technical Architect & AI Builder</title>
+  <meta name="description" content="Portfolio of Lovy Jain — Technical Architect specializing in enterprise AI, Microsoft Azure, and product engineering. Based in Delhi-NCR, India.">
+  <meta property="og:title" content="Lovy Jain — Technical Architect & AI Builder">
+  <meta property="og:description" content="I design and build enterprise AI systems at the intersection of Microsoft cloud, intelligent automation, and product engineering.">
+  <meta property="og:url" content="https://lovyjain.github.io">
+  <link rel="canonical" href="https://lovyjain.github.io">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --surface: #f7f8fa;
+      --border: #e5e7eb;
+      --text: #111827;
+      --muted: #6b7280;
+      --accent: #1d4ed8;
+      --accent-bg: #eff6ff;
+      --max-w: 860px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+    }
+
+    nav .inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-name {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    /* ── Layout helper ── */
+    .wrap {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 88px 0 72px;
+    }
+
+    .hero-label {
+      display: inline-block;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      margin-bottom: 20px;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 540px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.15s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border: 1.5px solid var(--accent);
+    }
+
+    .btn-primary:hover { background: #1e40af; border-color: #1e40af; }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1.5px solid var(--border);
+    }
+
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ── Section base ── */
+    .section {
+      padding: 72px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 40px;
+    }
+
+    /* ── Experience ── */
+    .exp-list {
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+    }
+
+    .exp-row {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 20px;
+    }
+
+    .exp-period {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      font-weight: 500;
+      padding-top: 2px;
+      line-height: 1.5;
+    }
+
+    .exp-body h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .exp-company {
+      font-size: 0.875rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .exp-desc {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    /* ── Tag pill ── */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      background: var(--accent-bg);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    /* ── Projects ── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 24px rgba(29, 78, 216, 0.07);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .card-link {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .card-link:hover { text-decoration: underline; }
+
+    .card-desc {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    /* ── Contact ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .contact-intro {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .c-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .c-link:hover { color: var(--accent); }
+
+    .c-icon {
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+      flex-shrink: 0;
+      transition: border-color 0.15s;
+      color: var(--muted);
+      font-style: normal;
+    }
+
+    .c-link:hover .c-icon {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px 0;
+    }
+
+    footer .inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-text {
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover { color: var(--accent); }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .hero { padding: 60px 0 52px; }
+      .exp-row { grid-template-columns: 1fr; gap: 6px; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+      .nav-links { gap: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav>
+  <div class="inner">
+    <a href="#" class="nav-name">Lovy Jain</a>
+    <ul class="nav-links">
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<div class="hero">
+  <div class="wrap">
+    <span class="hero-label">Technical Architect &amp; AI Builder</span>
+    <h1>Hi, I'm Lovy Jain.</h1>
+    <p class="hero-sub">
+      I design and build enterprise AI systems — at the intersection of Microsoft cloud,
+      intelligent automation, and product engineering. Based in Delhi-NCR, India.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="https://linkedin.com/in/jainlovy" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="mailto:lovyjain18@gmail.com" class="btn btn-ghost">Get in touch</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── Experience ── -->
+<section class="section" id="experience">
+  <div class="wrap">
+    <p class="section-eyebrow">Experience</p>
+    <div class="exp-list">
+
+      <div class="exp-row">
+        <div class="exp-period">2023 — Present</div>
+        <div class="exp-body">
+          <h3>Technical Architect</h3>
+          <div class="exp-company">Stetig Consulting</div>
+          <p class="exp-desc">
+            Leading enterprise AI adoption for large organisations — architecting Copilot Studio
+            agents, Azure OpenAI integrations, and agentic orchestration pipelines. Responsible
+            for end-to-end solution design across Dynamics 365, Power Platform, and Azure-native
+            services. Driving delivery strategy and pre-sales architecture for key accounts.
+          </p>
+          <div class="tags">
+            <span class="tag">Azure OpenAI</span>
+            <span class="tag">Copilot Studio</span>
+            <span class="tag">Dynamics 365</span>
+            <span class="tag">Power Platform</span>
+            <span class="tag">Azure Functions</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-row">
+        <div class="exp-period">2021 — 2023</div>
+        <div class="exp-body">
+          <h3>Senior Consultant — Microsoft Practice</h3>
+          <div class="exp-company">Avanade</div>
+          <p class="exp-desc">
+            Delivered end-to-end Dynamics 365 and Power Platform solutions for enterprise clients
+            across financial services and professional services. Led cross-functional squads through
+            full delivery cycles — from discovery workshops to go-live and hypercare. Specialised
+            in Dataverse architecture, custom connectors, and Azure integration services.
+          </p>
+          <div class="tags">
+            <span class="tag">Dynamics 365 CRM</span>
+            <span class="tag">Dataverse</span>
+            <span class="tag">Power Automate</span>
+            <span class="tag">Azure Logic Apps</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-row">
+        <div class="exp-period">2018 — 2021</div>
+        <div class="exp-body">
+          <h3>Developer — Microsoft Dynamics</h3>
+          <div class="exp-company">Infosys</div>
+          <p class="exp-desc">
+            Built and customised CRM solutions on Microsoft Dynamics 365 for clients in
+            manufacturing, retail, and services. Developed plugins, workflows, and
+            Azure-integrated data pipelines. Mentored junior developers and contributed to
+            internal practice knowledge base.
+          </p>
+          <div class="tags">
+            <span class="tag">Dynamics CRM</span>
+            <span class="tag">C# Plugins</span>
+            <span class="tag">Azure Service Bus</span>
+            <span class="tag">SQL Server</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Projects ── -->
+<section class="section" id="projects">
+  <div class="wrap">
+    <p class="section-eyebrow">Projects</p>
+    <div class="projects-grid">
+
+      <div class="card">
+        <div class="card-header">
+          <h3>JainKwiz</h3>
+          <a href="https://jainkwiz.com" class="card-link" target="_blank" rel="noopener">Live ↗</a>
+        </div>
+        <p class="card-desc">
+          A gamified learning platform making Jain philosophy accessible and engaging for the
+          global Jain community. Features real-time multiplayer tournaments via Azure SignalR,
+          spaced repetition (SM-2), an AI chatbot grounded on a curated Jain knowledge base,
+          and a progressive web app for offline-first mobile use.
+        </p>
+        <div class="tags">
+          <span class="tag">React + Ionic</span>
+          <span class="tag">Azure OpenAI</span>
+          <span class="tag">SignalR</span>
+          <span class="tag">Cosmos DB</span>
+          <span class="tag">Azure AI Search</span>
+          <span class="tag">PWA</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Enterprise Copilot Framework</h3>
+        </div>
+        <p class="card-desc">
+          An internal delivery accelerator for deploying enterprise-grade AI copilots on Microsoft
+          platforms. Covers authentication patterns, governance guardrails, observability, and
+          reusable integration components for Copilot Studio and Azure OpenAI deployments —
+          reducing solution build time by weeks per engagement.
+        </p>
+        <div class="tags">
+          <span class="tag">Copilot Studio</span>
+          <span class="tag">Azure OpenAI</span>
+          <span class="tag">Power Platform</span>
+          <span class="tag">Azure Monitor</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Agentic Orchestration PoC</h3>
+        </div>
+        <p class="card-desc">
+          A proof-of-concept for multi-agent task orchestration on Azure — demonstrating how
+          autonomous AI agents can coordinate across Dynamics 365, SharePoint, and external APIs
+          to complete complex, multi-step business workflows with minimal human intervention.
+        </p>
+        <div class="tags">
+          <span class="tag">Azure AI Foundry</span>
+          <span class="tag">Semantic Kernel</span>
+          <span class="tag">Dynamics 365</span>
+          <span class="tag">Azure Functions</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ── -->
+<section class="section" id="contact">
+  <div class="wrap">
+    <p class="section-eyebrow">Contact</p>
+    <div class="contact-grid">
+      <div>
+        <p class="contact-intro">
+          Open to conversations on enterprise AI architecture, Microsoft platform strategy,
+          and building meaningful products. I'm based in Delhi-NCR, India — and happy to
+          connect remotely anywhere.
+        </p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:lovyjain18@gmail.com" class="c-link">
+          <i class="c-icon">✉</i>
+          lovyjain18@gmail.com
+        </a>
+        <a href="https://linkedin.com/in/jainlovy" class="c-link" target="_blank" rel="noopener">
+          <i class="c-icon">in</i>
+          linkedin.com/in/jainlovy
+        </a>
+        <a href="https://github.com/lovyjain" class="c-link" target="_blank" rel="noopener">
+          <i class="c-icon">gh</i>
+          github.com/lovyjain
+        </a>
+        <a href="https://jainkwiz.com" class="c-link" target="_blank" rel="noopener">
+          <i class="c-icon">↗</i>
+          jainkwiz.com
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer>
+  <div class="inner">
+    <p class="footer-text">© 2026 Lovy Jain · Delhi-NCR, India</p>
+    <ul class="footer-links">
+      <li><a href="https://linkedin.com/in/jainlovy" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/lovyjain" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="https://jainkwiz.com" target="_blank" rel="noopener">JainKwiz</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
